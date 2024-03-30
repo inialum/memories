@@ -1,0 +1,33 @@
+{
+  "cSpell.words": [
+    "astro",
+    "astrojs",
+    "clsx",
+    "Hono",
+    "INIAD",
+    "INIALUM",
+    "Miniflare",
+    "noindex",
+    "nosniff",
+    "openapi",
+    "tsconfigs"
+  ],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.referencesCodeLens.enabled": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
