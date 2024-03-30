@@ -8,11 +8,11 @@
   },
   "scripts": {
     "lint": "pnpm run lint:check && pnpm run format:check",
-    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx,astro}\" --ignore-path .gitignore .",
+    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path .gitignore .",
     "format": "pnpm run format:fix",
-    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md,astro}\"",
-    "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md,astro}\""
+    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "devDependencies": {
     "@inialum/eslint-config": "^1.1.1",
