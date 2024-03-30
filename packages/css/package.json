@@ -1,0 +1,35 @@
+{
+  "name": "@inialum/memories-css",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "lint": "pnpm run lint:check && pnpm run format:check",
+    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
+    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
+    "format": "pnpm run format:fix",
+    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "storybook:dev": "storybook dev -p 6006 --no-open",
+    "storybook:build": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.0.5",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-interactions": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/blocks": "^8.0.5",
+    "@storybook/html": "^8.0.5",
+    "@storybook/html-vite": "^8.0.5",
+    "@storybook/manager-api": "^8.0.5",
+    "@storybook/test": "^8.0.5",
+    "@storybook/theming": "^8.0.5",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "storybook": "^8.0.5",
+    "tailwindcss": "^3.4.3"
+  }
+}

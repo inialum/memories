@@ -1,0 +1,8 @@
+{
+  "extends": ["@inialum", "plugin:storybook/recommended", "prettier"],
+  "parserOptions": {
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "ignorePatterns": ["!.storybook"]
+}
