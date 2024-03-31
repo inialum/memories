@@ -1,13 +1,23 @@
-import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
 
-type TailwindConfig = Omit<Config, 'content'>
-const buildTailwindConfig = () => {
-  return {
-    theme: {
-      extend: {},
-    },
-    plugins: [],
-  }
-}
+import { Button } from '@/components'
+import { tailwindConfig } from '@/tailwind/config'
+import { type ConfigOptions } from '@/types'
 
-export const config: TailwindConfig = buildTailwindConfig()
+const memories = plugin.withOptions<ConfigOptions>(
+  (options) => {
+    return ({ addComponents }) => {
+      addComponents([Button])
+
+      if (options?.base !== false) {
+        // TODO: Add base styles here
+      }
+    }
+  },
+  () => {
+    return { ...tailwindConfig }
+  },
+)
+
+export { memories }
+export type { ConfigOptions }
