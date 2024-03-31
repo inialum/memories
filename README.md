@@ -1,1 +1,1 @@
-# Memories | INIALUM Design System
+# Memories - INIALUM Design System
