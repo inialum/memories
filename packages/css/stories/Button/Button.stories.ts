@@ -7,9 +7,7 @@ import type { Meta, StoryObj } from '@storybook/html'
 const meta = {
   title: 'Button',
   tags: ['autodocs'],
-  render: ({ label, ...args }) => {
-    return createButton({ label, ...args })
-  },
+  render: ({ label, ...args }) => createButton({ label, ...args }),
   argTypes: {
     label: { control: 'text' },
     colorTheme: {

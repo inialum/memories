@@ -1,4 +1,6 @@
-export const ButtonLink = {
+import { type CSSRuleObject } from 'tailwindcss/types/config'
+
+export const ButtonLink: CSSRuleObject = {
   '.ButtonLink': {
     '@apply inline-flex items-center justify-center cursor-pointer': {},
   },
@@ -44,7 +46,7 @@ export const ButtonLink = {
   },
 
   '.ButtonLink--more-rounded': {
-    'border-radius': '32px',
+    borderRadius: '32px',
   },
 
   '.ButtonLink--disabled': {

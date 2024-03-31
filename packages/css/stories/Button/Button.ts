@@ -19,12 +19,12 @@ export const createButton = ({
   label = '',
   onClick,
 }: ButtonProps) => {
-  const btn = document.createElement('button')
-  btn.type = 'button'
-  btn.innerText = label
-  btn.addEventListener('click', onClick)
+  const buttonElem = document.createElement('button')
+  buttonElem.type = 'button'
+  buttonElem.innerText = label
+  buttonElem.addEventListener('click', onClick)
 
-  btn.className = clsx(
+  buttonElem.className = clsx(
     'Button',
     colorTheme === 'primary' && 'Button--primary',
     colorTheme === 'secondary' && 'Button--secondary',
@@ -40,5 +40,5 @@ export const createButton = ({
     disabled && 'Button--disabled',
   )
 
-  return btn
+  return buttonElem
 }

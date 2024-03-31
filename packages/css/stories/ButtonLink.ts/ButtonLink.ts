@@ -18,13 +18,13 @@ export const createButtonLink = ({
   label = '',
   ...rest
 }: ButtonLinkProps) => {
-  const btnLink = document.createElement('a')
-  btnLink.innerText = label
+  const buttonLinkElem = document.createElement('a')
+  buttonLinkElem.innerText = label
   if (rest.target === '_blank' && typeof rest.rel === 'undefined') {
-    btnLink.rel = 'noopener noreferrer'
+    buttonLinkElem.rel = 'noopener noreferrer'
   }
 
-  btnLink.className = clsx(
+  buttonLinkElem.className = clsx(
     'ButtonLink',
     colorTheme === 'primary' && 'ButtonLink--primary',
     colorTheme === 'secondary' && 'ButtonLink--secondary',
@@ -40,5 +40,5 @@ export const createButtonLink = ({
     disabled && 'ButtonLink--disabled',
   )
 
-  return btnLink
+  return buttonLinkElem
 }
