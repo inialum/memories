@@ -1,12 +1,6 @@
 import clsx from 'clsx'
 
-export enum ButtonSize {
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-}
-
-export type ButtonProps = {
+export type ButtonProps = HTMLButtonElement & {
   colorTheme?: 'primary' | 'secondary' | 'white'
   size?: 'small' | 'medium' | 'large' | 'full-width'
   styleType?: 'filled' | 'outlined'

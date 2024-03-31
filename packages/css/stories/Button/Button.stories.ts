@@ -2,7 +2,7 @@ import { fn } from '@storybook/test'
 
 import { type ButtonProps, createButton } from './Button'
 
-import type { ArgTypes, Meta, StoryObj } from '@storybook/html'
+import type { Meta, StoryObj } from '@storybook/html'
 
 const meta = {
   title: 'Button',
@@ -37,10 +37,7 @@ const meta = {
     disabled: {
       control: 'boolean',
     },
-    onClick: {
-      action: 'onClick',
-    },
-  } satisfies Required<ArgTypes<ButtonProps>>,
+  },
   args: {
     onClick: fn(),
   },
