@@ -58,7 +58,7 @@ importers:
         version: 8.0.5
       '@storybook/html-vite':
         specifier: ^8.0.5
-        version: 8.0.5(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)(vite@5.2.7)
+        version: 8.0.5(react-dom@18.2.0)(react@18.2.0)(vite@5.2.7)
       '@storybook/manager-api':
         specifier: ^8.0.5
         version: 8.0.5(react-dom@18.2.0)(react@18.2.0)
@@ -68,12 +68,21 @@ importers:
       '@storybook/theming':
         specifier: ^8.0.5
         version: 8.0.5(react-dom@18.2.0)(react@18.2.0)
+      '@types/postcss-js':
+        specifier: ^4.0.4
+        version: 4.0.4
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
       postcss:
         specifier: ^8.4.38
         version: 8.4.38
+      postcss-js:
+        specifier: ^4.0.1
+        version: 4.0.1(postcss@8.4.38)
       storybook:
         specifier: ^8.0.5
         version: 8.0.5(react-dom@18.2.0)(react@18.2.0)
@@ -2155,7 +2164,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-vite@8.0.5(typescript@5.4.3)(vite@5.2.7):
+  /@storybook/builder-vite@8.0.5(vite@5.2.7):
     resolution: {integrity: sha512-tKNxobC9tlYyUAayxoiOOnoMbg4RxoAwPOpPLnQYUfHLw1ecp/g8sGD6tisyFONyOIv7uF9gbzWLUfMjn9F2sw==}
     peerDependencies:
       '@preact/preset-vite': '*'
@@ -2187,8 +2196,7 @@ packages:
       fs-extra: 11.2.0
       magic-string: 0.30.8
       ts-dedent: 2.2.0
-      typescript: 5.4.3
-      vite: 5.2.7(@types/node@20.11.30)
+      vite: 5.2.7
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -2460,11 +2468,11 @@ packages:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
     dev: true
 
-  /@storybook/html-vite@8.0.5(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.3)(vite@5.2.7):
+  /@storybook/html-vite@8.0.5(react-dom@18.2.0)(react@18.2.0)(vite@5.2.7):
     resolution: {integrity: sha512-qJsQQ4QCKZ8XVg5opo6dm1vfjVLWsFgKnyK0981W1rKk5eMsGy5+sok/kdL2bsTdDapwQsa3UfZ23sy5BPTAyw==}
     engines: {node: '>=18.0.0'}
     dependencies:
-      '@storybook/builder-vite': 8.0.5(typescript@5.4.3)(vite@5.2.7)
+      '@storybook/builder-vite': 8.0.5(vite@5.2.7)
       '@storybook/core-server': 8.0.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/html': 8.0.5
       '@storybook/node-logger': 8.0.5
@@ -2823,6 +2831,12 @@ packages:
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+    dev: true
+
+  /@types/postcss-js@4.0.4:
+    resolution: {integrity: sha512-j5+GMZVIPCJpRTwI/mO64mCzv7X+zAEq3JP0EV2lo/BrLWHAohEubUJimIAY23rH27+wKce0fXUYjAdBoqlaYw==}
+    dependencies:
+      postcss: 8.4.38
     dev: true
 
   /@types/pretty-hrtime@1.0.3:
@@ -3682,6 +3696,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: true
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
     dev: true
 
   /color-convert@1.9.3:
@@ -7576,7 +7595,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@5.2.7(@types/node@20.11.30):
+  /vite@5.2.7:
     resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7604,7 +7623,6 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.30
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.13.2
