@@ -8,7 +8,7 @@ export enum ButtonSize {
 
 export type ButtonProps = {
   colorTheme?: 'primary' | 'secondary' | 'white'
-  size?: 'small' | 'medium' | 'large' | 'fullWidth'
+  size?: 'small' | 'medium' | 'large' | 'full-width'
   styleType?: 'filled' | 'outlined'
   radius?: 'none' | 'rounded' | 'more-rounded'
   disabled?: boolean
@@ -38,7 +38,7 @@ export const createButton = ({
     size === 'small' && 'Button--small',
     size === 'medium' && 'Button--medium',
     size === 'large' && 'Button--large',
-    size === 'fullWidth' && 'Button--fullWidth',
+    size === 'full-width' && 'Button--full-width',
     styleType === 'filled' && 'Button--filled',
     styleType === 'outlined' && 'Button--outlined',
     radius === 'rounded' && 'Button--rounded',

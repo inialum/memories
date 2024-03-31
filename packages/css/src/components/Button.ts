@@ -23,12 +23,20 @@ export const Button = {
     '@apply border-blue-400 text-blue-400': {},
   },
 
-  '.Button--fullWidth': {
+  '.Button--full-width': {
     '@apply Button--medium w-full': {},
   },
 
+  '.Button--large': {
+    '@apply text-xl py-16 px-40': {},
+  },
+
   '.Button--medium': {
-    '@apply text-lg py-3 px-8': {},
+    '@apply text-lg py-12 px-32': {},
+  },
+
+  '.Button--small': {
+    '@apply text-base py-8 px-24': {},
   },
 
   '.Button--rounded': {

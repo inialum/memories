@@ -20,7 +20,7 @@ const meta = {
       control: {
         type: 'select',
       },
-      options: ['small', 'medium', 'large'],
+      options: ['small', 'medium', 'large', 'full-width'],
     },
     styleType: {
       control: {
