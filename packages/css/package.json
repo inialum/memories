@@ -30,7 +30,8 @@
     "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "storybook:dev": "storybook dev -p 6006 --no-open",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^8.0.5",
