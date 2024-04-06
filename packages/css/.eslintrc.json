@@ -3,5 +3,5 @@
   "parserOptions": {
     "project": ["./tsconfig.json", "./tsconfig.node.json"]
   },
-  "ignorePatterns": ["!.storybook"]
+  "ignorePatterns": ["!.storybook", "dist"]
 }
