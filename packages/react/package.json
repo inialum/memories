@@ -1,0 +1,55 @@
+{
+  "name": "@inialum/memories-react",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "lint": "pnpm run lint:check && pnpm run format:check",
+    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
+    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
+    "format": "pnpm run format:fix",
+    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "storybook:dev": "storybook dev -p 6006 --no-open",
+    "storybook:build": "storybook build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@inialum/memories-css": "workspace:*",
+    "@storybook/addon-a11y": "^8.0.6",
+    "@storybook/addon-essentials": "^8.0.6",
+    "@storybook/addon-interactions": "^8.0.6",
+    "@storybook/addon-links": "^8.0.6",
+    "@storybook/blocks": "^8.0.6",
+    "@storybook/manager-api": "^8.0.6",
+    "@storybook/react": "^8.0.6",
+    "@storybook/react-vite": "^8.0.6",
+    "@storybook/test": "^8.0.6",
+    "@storybook/theming": "^8.0.6",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "autoprefixer": "^10.4.19",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "postcss": "^8.4.38",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.6",
+    "tailwindcss": "^3.4.3",
+    "tsup": "^8.0.2"
+  },
+  "peerDependencies": {
+    "@inialum/memories-css": ">= 0.1.0",
+    "react": ">= 18.2.0",
+    "react-dom": ">= 18.2.0",
+    "tailwindcss": ">= 3.0.0"
+  }
+}
