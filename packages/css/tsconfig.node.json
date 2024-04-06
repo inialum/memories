@@ -7,5 +7,5 @@
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["./tailwind.config.ts", "./tsup.config.ts"]
+  "include": ["./tsup.config.ts"]
 }

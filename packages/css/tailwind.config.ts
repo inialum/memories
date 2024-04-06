@@ -1,6 +1,6 @@
 import { type Config } from 'tailwindcss'
 
-import { memories } from './src/index'
+import { memories } from '@/index'
 
 const config = {
   content: ['./stories/**/*.{ts,mdx}'],
