@@ -6,10 +6,6 @@
       "@memories-css/*": ["./*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".storybook/**/*.ts",
-    ".storybook/**/*.tsx"
-  ]
+  "include": ["src", "stories", ".storybook"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
