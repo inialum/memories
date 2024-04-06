@@ -10,7 +10,8 @@
     "noindex",
     "nosniff",
     "openapi",
-    "tsconfigs"
+    "tsconfigs",
+    "tsup"
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {

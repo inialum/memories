@@ -2,11 +2,27 @@
   "name": "@inialum/memories-css",
   "type": "module",
   "private": true,
+  "author": {
+    "name": "INIALUM - INIAD Alumni Meetings",
+    "email": "contact@inialum.org",
+    "url": "https://inialum.org"
+  },
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inialum/memories"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/**/*.js",
+    "./dist/**/*.d.ts"
+  ],
   "scripts": {
+    "build": "tsup",
     "lint": "pnpm run lint:check && pnpm run format:check",
     "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
     "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
@@ -33,6 +49,10 @@
     "postcss": "^8.4.38",
     "postcss-js": "^4.0.1",
     "storybook": "^8.0.5",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "tsup": "^8.0.2"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">= 3.0.0"
   }
 }
