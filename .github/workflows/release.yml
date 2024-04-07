@@ -15,11 +15,11 @@ on:
       package:
         description: 'Target package'
         required: true
-        default: 'memories-css'
+        default: '@inialum/memories-css'
         type: choice
         options:
-          - memories-css
-          - memories-react
+          - '@inialum/memories-css'
+          - '@inialum/memories-react'
 
 jobs:
   test:
@@ -72,7 +72,7 @@ jobs:
       id-token: write
     defaults:
       run:
-        working-directory: ${{ contains(github.event.inputs.package, 'memories-css') && 'packages/css' || 'packages/react' }}
+        working-directory: packages/${{ contains(github.event.inputs.package, '@inialum/memories-css') && 'css' || 'react' }}
 
     steps:
       - uses: actions/create-github-app-token@v1
@@ -129,34 +129,45 @@ jobs:
         if: contains(github.event.inputs.versioning, 'major')
         run: pnpm version major
 
+      - name: Generate version name
+        id: generate_version_name
+        run: echo "value=${{ github.event.inputs.package }}@$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_ENV
+
+      - name: Commit changes
+        if: ${{ contains(github.event.inputs.versioning, 'canary') }} != true
+        run: >-
+          git add ./package.json
+          git commit -m "Release ${{ steps.generate_version_name.outputs.value }}" &&
+          git tag -a ${{ steps.generate_version_name.outputs.value }} -m "Release ${{ steps.generate_version_name.outputs.value }}"
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+
       - name: Push changes
+        if: ${{ contains(github.event.inputs.versioning, 'canary') }} != true
         run: git push --follow-tags origin HEAD
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
-      - name: Get updated version
-        id: get_version
-        run: echo "value=$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_OUTPUT
-
       - name: Create release note
         uses: actions/github-script@v7
+        if: false
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: "v${{ steps.get_version.outputs.value }}",
+              tag_name: ${{ steps.generate_version_name.outputs.value }},
               generate_release_notes: true,
               prerelease: ${{ contains(github.event.inputs.versioning, 'canary') }}
             });
 
       - name: Publish canary package to npm
         if: contains(github.event.inputs.versioning, 'canary')
-        run: pnpm publish --provenance --tag canary
+        run: pnpm publish --provenance --tag canary --dry-run
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
 
       - name: Publish package to npm
         if: contains(github.event.inputs.versioning , 'canary') != true
-        run: pnpm publish --provenance
+        run: pnpm publish --provenance --dry-run
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
