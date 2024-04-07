@@ -136,9 +136,9 @@ jobs:
       - name: Commit changes
         if: ${{ contains(github.event.inputs.versioning, 'canary') }} != true
         run: >-
-          git add ./package.json
+          git add ./package.json &&
           git commit -m "Release ${{ steps.generate_version_name.outputs.value }}" &&
-          git tag -a ${{ steps.generate_version_name.outputs.value }} -m "Release ${{ steps.generate_version_name.outputs.value }}"
+          git tag -a "${{ steps.generate_version_name.outputs.value }}" -m "Release ${{ steps.generate_version_name.outputs.value }}"
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
