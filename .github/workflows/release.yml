@@ -154,7 +154,7 @@ jobs:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: ${{ steps.generate_version_name.outputs.value }},
+              tag_name: "${{ steps.generate_version_name.outputs.value }}",
               generate_release_notes: true,
               prerelease: ${{ contains(github.event.inputs.versioning, 'canary') }}
             });
