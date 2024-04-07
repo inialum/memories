@@ -131,7 +131,7 @@ jobs:
 
       - name: Generate version name
         id: generate_version_name
-        run: echo "value=${{ github.event.inputs.package }}@$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_ENV
+        run: echo "value=${{ github.event.inputs.package }}@$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_OUTPUT
 
       - name: Commit changes
         if: ${{ contains(github.event.inputs.versioning, 'canary') }} != true
