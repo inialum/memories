@@ -1,8 +1,8 @@
 {
   "name": "@inialum/memories-react",
   "version": "0.0.0",
+  "description": "React component library for the Memories - INIALUM Design System",
   "type": "module",
-  "private": true,
   "author": {
     "name": "INIALUM - INIAD Alumni Meetings",
     "email": "contact@inialum.org",
@@ -13,6 +13,15 @@
     "type": "git",
     "url": "https://github.com/inialum/memories"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "design-system",
+    "tailwindcss",
+    "ui"
+  ],
   "engines": {
     "node": ">=20.0.0"
   },
