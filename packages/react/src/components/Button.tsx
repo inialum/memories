@@ -5,7 +5,7 @@ type Props = ComponentPropsWithRef<'button'> & {
   colorTheme?: 'primary' | 'secondary' | 'white'
   size?: 'small' | 'medium' | 'large' | 'fullWidth'
   styleType?: 'filled' | 'outlined'
-  radius?: 'none' | 'rounded' | 'more-rounded'
+  radius?: 'none' | 'rounded' | 'moreRounded'
 }
 
 export const Button = ({
@@ -29,11 +29,11 @@ export const Button = ({
         size === 'small' && 'Button--small',
         size === 'medium' && 'Button--medium',
         size === 'large' && 'Button--large',
-        size === 'fullWidth' && 'Button--fullWidth',
+        size === 'fullWidth' && 'Button--full-width',
         styleType === 'filled' && 'Button--filled',
         styleType === 'outlined' && 'Button--outlined',
         radius === 'rounded' && 'Button--rounded',
-        radius === 'more-rounded' && 'Button--more-rounded',
+        radius === 'moreRounded' && 'Button--more-rounded',
         rest.disabled && 'Button--disabled',
       )}
     >

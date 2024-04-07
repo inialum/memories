@@ -5,7 +5,7 @@ type Props = ComponentPropsWithRef<'a'> & {
   colorTheme?: 'primary' | 'secondary' | 'white'
   size?: 'small' | 'medium' | 'large' | 'fullWidth'
   styleType?: 'filled' | 'outlined'
-  radius?: 'none' | 'rounded' | 'more-rounded'
+  radius?: 'none' | 'rounded' | 'moreRounded'
   disabled?: boolean
 }
 
@@ -36,11 +36,11 @@ export const ButtonLink = ({
         size === 'small' && 'ButtonLink--small',
         size === 'medium' && 'ButtonLink--medium',
         size === 'large' && 'ButtonLink--large',
-        size === 'fullWidth' && 'ButtonLink--fullWidth',
+        size === 'fullWidth' && 'ButtonLink--full-width',
         styleType === 'filled' && 'ButtonLink--filled',
         styleType === 'outlined' && 'ButtonLink--outlined',
         radius === 'rounded' && 'ButtonLink--rounded',
-        radius === 'more-rounded' && 'ButtonLink--more-rounded',
+        radius === 'moreRounded' && 'ButtonLink--more-rounded',
         rest.disabled && 'ButtonLink--disabled',
       )}
     >

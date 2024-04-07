@@ -38,7 +38,7 @@ export const Rounded: Story = {
 export const MoreRounded: Story = {
   args: {
     ...Default.args,
-    radius: 'more-rounded',
+    radius: 'moreRounded',
     children: 'more...',
   },
 }
