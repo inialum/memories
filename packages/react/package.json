@@ -3,12 +3,27 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
+  "author": {
+    "name": "INIALUM - INIAD Alumni Meetings",
+    "email": "contact@inialum.org",
+    "url": "https://inialum.org"
+  },
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inialum/memories"
+  },
   "engines": {
     "node": ">=20.0.0"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/**/*.js",
+    "./dist/**/*.d.ts"
+  ],
   "scripts": {
-    "build": "tsup",
+    "build": "vite build",
     "lint": "pnpm run lint:check && pnpm run format:check",
     "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
     "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
@@ -36,6 +51,7 @@
     "@storybook/theming": "^8.0.6",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "autoprefixer": "^10.4.19",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
@@ -44,7 +60,8 @@
     "react-dom": "^18.2.0",
     "storybook": "^8.0.6",
     "tailwindcss": "^3.4.3",
-    "tsup": "^8.0.2"
+    "vite": "^5.2.8",
+    "vite-plugin-dts": "^3.8.1"
   },
   "peerDependencies": {
     "@inialum/memories-css": ">= 0.1.0",
