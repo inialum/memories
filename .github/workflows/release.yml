@@ -107,6 +107,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build package
         run: pnpm build
 
