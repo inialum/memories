@@ -1,1 +1,1 @@
-export { Button, ButtonLink } from '@/components'
+export { Button, ButtonLink, Footer } from '@/components'
