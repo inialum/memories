@@ -16,6 +16,7 @@ pnpm add -D @inialum/memories-css
 ```
 
 ## Tailwind CSS Configuration
+
 You should add the `memories` plugin to your `tailwind.config.[ts|js|cjs]`.
 
 ```ts
