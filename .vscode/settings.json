@@ -10,6 +10,7 @@
     "noindex",
     "nosniff",
     "openapi",
+    "svgr",
     "tsconfigs",
     "tsup"
   ],

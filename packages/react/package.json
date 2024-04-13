@@ -58,6 +58,7 @@
     "@storybook/react-vite": "^8.0.6",
     "@storybook/test": "^8.0.6",
     "@storybook/theming": "^8.0.6",
+    "@svgr/plugin-svgo": "^8.1.0",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react-swc": "^3.6.0",
@@ -70,7 +71,8 @@
     "storybook": "^8.0.6",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.8",
-    "vite-plugin-dts": "^3.8.1"
+    "vite-plugin-dts": "^3.8.1",
+    "vite-plugin-svgr": "^4.2.0"
   },
   "peerDependencies": {
     "@inialum/memories-css": ">= 0.0.1",
