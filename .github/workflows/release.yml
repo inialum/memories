@@ -1,11 +1,12 @@
 name: Release
+run-name: '${{github.event.inputs.versioning}} release'
 on:
   workflow_dispatch:
     inputs:
       versioning:
         description: 'Versioning'
         required: true
-        default: 'patch'
+        default: 'canary'
         type: choice
         options:
           - major
@@ -134,7 +135,6 @@ jobs:
         run: echo "value=${{ github.event.inputs.package }}@$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_OUTPUT
 
       - name: Commit changes
-        if: contains(github.event.inputs.versioning , 'canary') != true
         run: >-
           git add ./package.json &&
           git commit -m "Release ${{ steps.generate_version_name.outputs.value }}" &&
@@ -143,7 +143,6 @@ jobs:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: Push changes
-        if: contains(github.event.inputs.versioning , 'canary') != true
         run: git push --follow-tags origin HEAD
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
