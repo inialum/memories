@@ -14,7 +14,9 @@
     "format": "pnpm run format:fix",
     "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "memories-css": "pnpm --filter \"./packages/css\"",
+    "memories-react": "pnpm --filter \"./packages/react\""
   },
   "devDependencies": {
     "@inialum/eslint-config": "^1.2.0",
