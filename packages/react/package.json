@@ -39,7 +39,7 @@
     "format": "pnpm run format:fix",
     "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "storybook:dev": "storybook dev -p 6006 --no-open",
+    "storybook:dev": "storybook dev -p 6007 --no-open",
     "storybook:build": "storybook build",
     "typecheck": "tsc --noEmit"
   },
