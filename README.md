@@ -1,6 +1,6 @@
 # Memories - INIALUM Design System
 
-Design system for INIALUM.  
+Design system for [INIALUM](https://inialum.org).  
 This project is a monorepo that contains the following packages:
 
 ### [@inialum/memories-css](packages/css)
