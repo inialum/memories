@@ -3,6 +3,7 @@
     "streetsidesoftware.code-spell-checker",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "unifiedjs.vscode-mdx"
   ]
 }
