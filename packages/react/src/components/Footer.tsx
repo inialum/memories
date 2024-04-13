@@ -34,7 +34,11 @@ export const Footer = ({ className, ...rest }: Props) => {
       </nav>
       <div className="Footer__Bottom">
         <div className="Footer__Item--top">
-          <a href="https://twitter.com/inialum" target="_blank" rel="noopener noreferrer" >
+          <a
+            href="https://twitter.com/inialum"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <XLogo width={24} height={24} aria-label="X公式アカウント" />
           </a>
         </div>
