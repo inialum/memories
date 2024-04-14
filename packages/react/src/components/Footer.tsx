@@ -39,7 +39,12 @@ export const Footer = ({ className, ...rest }: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <XLogo width={24} height={24} aria-label="X公式アカウント" />
+            <XLogo
+              width="auto"
+              height={24}
+              aria-label="X公式アカウント"
+              className="Footer__Item--XLogo"
+            />
           </a>
         </div>
         <div className="Footer__Item--small">
@@ -49,6 +54,13 @@ export const Footer = ({ className, ...rest }: Props) => {
             rel="noopener"
           >
             同窓会会則
+          </a>
+          <a
+            href="https://inialum.notion.site/4d2374f79b594f00b93c0efccf3c6bb4"
+            target="_blank"
+            rel="noopener"
+          >
+            役員一覧
           </a>
           <a
             href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
