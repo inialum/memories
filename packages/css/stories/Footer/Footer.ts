@@ -28,8 +28,8 @@ export const createFooter = () => {
           <img
             src="https://static-assets.inialum.org/images%2Fsocial%2Fx_icon.png"
             alt="X公式アカウント"
-            width="24"
             height="24"
+            class="Footer__Item--XLogo"
           />
         </a>
       </div>
@@ -40,6 +40,13 @@ export const createFooter = () => {
           rel="noopener"
         >
           同窓会会則
+        </a>
+        <a
+          href="https://inialum.notion.site/4d2374f79b594f00b93c0efccf3c6bb4"
+          target="_blank"
+          rel="noopener"
+        >
+          役員一覧
         </a>
         <a
           href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
