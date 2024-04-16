@@ -18,7 +18,7 @@ export const Footer: CSSRuleObject = {
     fontSize: '8px',
 
     '@media (768px <= width)': {
-      fontSize: '16px',
+      fontSize: '13px',
     },
   },
 
@@ -32,7 +32,7 @@ export const Footer: CSSRuleObject = {
     fontSize: '12px',
 
     '@media (768px <= width)': {
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
 
