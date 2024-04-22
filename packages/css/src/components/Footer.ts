@@ -18,7 +18,7 @@ export const Footer: CSSRuleObject = {
     fontSize: '8px',
 
     '@media (768px <= width)': {
-      fontSize: '16px',
+      fontSize: '13px',
     },
   },
 
@@ -32,12 +32,12 @@ export const Footer: CSSRuleObject = {
     fontSize: '12px',
 
     '@media (768px <= width)': {
-      fontSize: '18px',
+      fontSize: '16px',
     },
   },
 
   '.Footer .Footer__Bottom': {
-    '@apply flex flex-col items-center text-center border-t border-t-gray-500 max-w-[732px] mx-auto gap-y-16 md:gap-y-48 pt-28 md:pt-56 px-0 pb-0':
+    '@apply flex flex-col items-center text-center border-t border-t-gray-500 max-w-[732px] mx-auto gap-y-16 md:gap-y-36 pt-28 md:pt-56 px-0 pb-0':
       {},
   },
 
@@ -51,7 +51,7 @@ export const Footer: CSSRuleObject = {
     fontSize: '8px',
 
     '@media (768px <= width)': {
-      fontSize: '16px',
+      fontSize: '14px',
     },
   },
 
