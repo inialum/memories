@@ -20,15 +20,15 @@
   },
   "devDependencies": {
     "@inialum/eslint-config": "^1.2.0",
-    "@types/node": "^20.12.7",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.8.0",
     "prettier": "^3.2.5",
-    "turbo": "^1.13.2",
-    "typescript": "^5.4.3"
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394"
 }
