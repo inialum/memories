@@ -12,6 +12,10 @@ updates:
           - "@typescript-eslint/*"
           - "eslint*"
           - "prettier"
+      storybook:
+        patterns:
+          - "storybook*"
+          - "@storybook/*"
       test:
         patterns:
           - "@vitest/*"
