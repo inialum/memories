@@ -24,8 +24,7 @@ export const Navigation: CSSRuleObject = {
   },
 
   '.Navigation__CloseButton': {
-    '@apply absolute top-24 right-24 fill-base-WHITE w-24 h-24':
-      {},
+    '@apply absolute top-24 right-24 fill-base-WHITE w-24 h-24': {},
   },
 
   '.Navigation__Logo--mobile': {
