@@ -1,5 +1,10 @@
 import clsx from 'clsx'
-import { useEffect, useRef, type ComponentPropsWithRef } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  type ComponentPropsWithRef,
+} from 'react'
 
 import CrossIcon from '@/assets/cross_icon.svg?react'
 import InialumLogoWhiteTransparent from '@/assets/inialum_logo_white_transparent.svg?react'
@@ -7,12 +12,25 @@ import XLogo from '@/assets/x_logo.svg?react'
 
 type Props = ComponentPropsWithRef<'dialog'> & {
   isOpen: boolean
+  onClose: () => void
 }
 
-export const Navigation = ({ isOpen = false, className, ...rest }: Props) => {
+export const Navigation = ({
+  isOpen = false,
+  className,
+  onClose,
+  ...rest
+}: Props) => {
   const nowYear = new Date().getFullYear()
 
   const dialogRef = useRef<HTMLDialogElement>(null)
+
+  const _onClose = useCallback(() => {
+    const dialogElem = dialogRef.current
+    if (!dialogElem) return
+    dialogElem.close()
+    onClose()
+  }, [onClose])
 
   useEffect(() => {
     const dialogElem = dialogRef.current
@@ -29,7 +47,11 @@ export const Navigation = ({ isOpen = false, className, ...rest }: Props) => {
 
   return (
     <dialog {...rest} ref={dialogRef} className={clsx(className, 'Navigation')}>
-      <button className="Navigation__CloseButton" aria-label="閉じる">
+      <button
+        className="Navigation__CloseButton"
+        aria-label="閉じる"
+        onClick={_onClose}
+      >
         <CrossIcon width="24" height="24" aria-label="閉じる" />
       </button>
       <div className="Navigation__Logo--mobile">

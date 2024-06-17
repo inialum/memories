@@ -1,3 +1,5 @@
+import { fn } from '@storybook/test'
+
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Navigation } from '@/components/Navigation'
@@ -14,5 +16,6 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     isOpen: true,
+    onClose: fn(),
   },
 }
