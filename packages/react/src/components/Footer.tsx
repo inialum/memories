@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { type ComponentPropsWithRef } from 'react'
 
-import InialumLogoTransparent from '@/assets/inialum_logo_light_transparent.svg?react'
+import InialumLogoLightTransparent from '@/assets/inialum_logo_light_transparent.svg?react'
 import XLogo from '@/assets/x_logo.svg?react'
 
 type Props = ComponentPropsWithRef<'footer'>
@@ -13,7 +13,7 @@ export const Footer = ({ className, ...rest }: Props) => {
     <footer {...rest} className={clsx(className, 'Footer')}>
       <div className="Footer__Head">
         <div className="Footer__Logo">
-          <InialumLogoTransparent aria-label="INIALUM - INIAD Alumni Meetings" />
+          <InialumLogoLightTransparent aria-label="INIALUM - INIAD Alumni Meetings" />
         </div>
         <div className="Footer__Copy">さらなる連携を、ともに歩んだ仲間と</div>
       </div>
@@ -22,11 +22,9 @@ export const Footer = ({ className, ...rest }: Props) => {
           <li className="Footer__Item">
             <a href="/">ホーム</a>
           </li>
-          {/*
-          <li className={styles.Footer__Item}>
-            <a href="/about">私たちの思い</a>
+          <li className="Footer__Item">
+            <a href="/vision">私たちの思い</a>
           </li>
-          */}
           <li className="Footer__Item">
             <a href="https://inialum.org/join">入会する</a>
           </li>
