@@ -2,10 +2,14 @@ import { type CSSRuleObject } from 'tailwindcss/types/config'
 
 export const Navigation: CSSRuleObject = {
   '.Navigation': {
-    '@apply flex bg-blue-600 text-base-WHITE m-0 p-0 max-h-full h-svh left-full -translate-x-full sm:w-372 w-full':
+    '@apply bg-blue-600 text-base-WHITE m-0 p-0 max-h-full h-svh left-full -translate-x-full sm:w-372 w-full':
       {},
 
     transition: 'opacity .5s',
+
+    '&[open]': {
+      '@apply flex': {},
+    },
 
     '&::backdrop': {
       transition: 'opacity 0.5s',
