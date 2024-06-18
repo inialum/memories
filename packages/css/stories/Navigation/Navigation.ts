@@ -6,6 +6,7 @@ export const createNavigation = (_props: NavigationProps) => {
   const nowYear = new Date().getFullYear()
 
   navigationElem.innerHTML = `
+    <div class="Navigation__Content">
       <button class="Navigation__CloseButton" aria-label="閉じる" id="closeButton">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,6 +84,7 @@ export const createNavigation = (_props: NavigationProps) => {
           &copy; ${nowYear} INIALUM - INIAD Alumni Meetings.
         </div>
       </div>
+    </div>
   `
 
   const onClose = () => {

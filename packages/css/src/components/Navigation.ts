@@ -2,10 +2,9 @@ import { type CSSRuleObject } from 'tailwindcss/types/config'
 
 export const Navigation: CSSRuleObject = {
   '.Navigation': {
-    '@apply bg-blue-600 text-base-WHITE m-0 p-0 max-w-full max-h-full h-svh left-full sm:w-372 w-full':
+    '@apply flex bg-blue-600 text-base-WHITE m-0 p-0 max-h-full h-svh left-full -translate-x-full sm:w-372 w-full':
       {},
 
-    transform: 'translateX(-100%)',
     transition: 'opacity .5s',
 
     '&::backdrop': {
@@ -21,6 +20,10 @@ export const Navigation: CSSRuleObject = {
 
       background: 'rgba(0, 53, 71, 0.20)',
     },
+  },
+
+  '.Navigation__Content': {
+    '@apply w-full h-full': {},
   },
 
   '.Navigation__CloseButton': {
@@ -42,7 +45,7 @@ export const Navigation: CSSRuleObject = {
   },
 
   '.Navigation__Content--bottom': {
-    '@apply flex flex-col justify-center border-t border-t-gray-300 gap-y-24 pt-24 mx-36 mb-80 sm:w-300':
+    '@apply flex flex-col justify-center border-t border-t-gray-300 gap-y-24 pt-24 mx-36 pb-80 sm:w-300':
       {},
   },
 
