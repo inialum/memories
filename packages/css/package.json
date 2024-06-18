@@ -1,6 +1,6 @@
 {
   "name": "@inialum/memories-css",
-  "version": "0.1.2-canary.3",
+  "version": "0.2.0",
   "description": "Fundamental CSS styles for the Memories - INIALUM Design System",
   "type": "module",
   "author": {
