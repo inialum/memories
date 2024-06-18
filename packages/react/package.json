@@ -44,7 +44,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "react-remove-scroll": "^2.5.10"
   },
   "devDependencies": {
     "@inialum/memories-css": "workspace:*",
