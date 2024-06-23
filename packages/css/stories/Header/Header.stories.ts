@@ -1,11 +1,11 @@
-import { createFooter } from './Footer'
+import { createHeader } from './Header'
 
 import type { Meta, StoryObj } from '@storybook/html'
 
 const meta = {
-  title: 'Footer',
+  title: 'Header',
   tags: ['autodocs'],
-  render: () => createFooter(),
+  render: () => createHeader(),
 } satisfies Meta
 
 export default meta

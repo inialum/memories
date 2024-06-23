@@ -38,8 +38,6 @@ export const Footer = ({ className, ...rest }: Props) => {
             rel="noopener noreferrer"
           >
             <XLogo
-              width="auto"
-              height={24}
               aria-label="X公式アカウント"
               className="Footer__Item--XLogo"
             />

@@ -2,7 +2,7 @@ import { type CSSRuleObject } from 'tailwindcss/types/config'
 
 export const Navigation: CSSRuleObject = {
   '.Navigation': {
-    '@apply bg-blue-600 text-base-WHITE m-0 p-0 max-h-full h-svh left-full -translate-x-full sm:w-372 w-full':
+    '@apply bg-blue-600 text-base-WHITE m-0 p-0 max-w-full max-h-full h-svh left-full -translate-x-full sm:w-372 w-full':
       {},
 
     transition: 'opacity .5s',
@@ -31,7 +31,7 @@ export const Navigation: CSSRuleObject = {
   },
 
   '.Navigation__CloseButton': {
-    '@apply absolute top-24 right-24 fill-base-WHITE w-24 h-24': {},
+    '@apply absolute top-20 right-20 p-4 fill-base-WHITE': {},
   },
 
   '.Navigation__Logo--mobile': {
@@ -59,8 +59,6 @@ export const Navigation: CSSRuleObject = {
 
   '.Navigation__Item--XLogo': {
     '@apply h-24 fill-base-WHITE': {},
-
-    aspectRatio: '23.4 / 24',
   },
 
   '.Navigation__Item--small': {

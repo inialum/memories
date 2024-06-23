@@ -11,7 +11,6 @@ const meta = {
 } satisfies Meta<NavigationProps>
 
 export default meta
-
 type Story = StoryObj<NavigationProps>
 
 export const Default: Story = {

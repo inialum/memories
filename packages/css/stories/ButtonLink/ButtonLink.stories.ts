@@ -37,7 +37,6 @@ const meta = {
 } satisfies Meta<ButtonLinkProps>
 
 export default meta
-
 type Story = StoryObj<ButtonLinkProps>
 
 export const Default: Story = {

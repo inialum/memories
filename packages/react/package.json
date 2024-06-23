@@ -1,6 +1,6 @@
 {
   "name": "@inialum/memories-react",
-  "version": "0.2.0",
+  "version": "0.2.1-canary.2",
   "description": "React component library for the Memories - INIALUM Design System",
   "type": "module",
   "author": {
