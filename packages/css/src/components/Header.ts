@@ -11,6 +11,6 @@ export const Header: CSSRuleObject = {
   },
 
   '.Header__Navigation--button': {
-    '@apply ml-auto mr-24 fill-base-WHITE': {},
+    '@apply ml-auto mr-18 p-4 fill-base-WHITE': {},
   },
 }
