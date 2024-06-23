@@ -6,7 +6,7 @@ export const Header: CSSRuleObject = {
   },
 
   '.Header__Logo--large': {
-    '@apply absolute top-0 left-0 flex items-center justify-center w-160 h-160 p-12 md:w-[320px] md:h-[320px] md:p-24 bg-base-WHITE absolute z-30':
+    '@apply absolute top-0 left-0 flex items-center justify-center w-160 h-160 p-12 md:w-[320px] md:h-[320px] md:p-24 bg-base-WHITE z-30':
       {},
   },
 
