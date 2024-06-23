@@ -18,7 +18,7 @@ export const Header = ({ hasNavigation = true, className, ...rest }: Props) => {
   return (
     <header {...rest} className={clsx(className, 'Header')}>
       <div className="Header__Logo--large">
-        <InialumLogoLightTransparent />
+        <InialumLogoLightTransparent aria-label="INIALUM - INIAD Alumni Meetings" />
       </div>
 
       {hasNavigation && (
@@ -27,11 +27,13 @@ export const Header = ({ hasNavigation = true, className, ...rest }: Props) => {
             className="Header__Navigation--button"
             title="ナビゲーションメニュー"
             aria-label="ナビゲーションメニューを開く"
+            aria-haspopup="true"
+            aria-expanded={isOpen}
             onClick={onClick}
           >
-            <MenuIcon />
+            <MenuIcon aria-hidden="true" />
           </button>
-          <Navigation isOpen={isOpen} onClose={onClick} />
+          {isOpen && <Navigation isOpen={isOpen} onClose={onClick} />}
         </>
       )}
     </header>
