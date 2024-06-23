@@ -127,7 +127,7 @@ const NavigationContent = ({
               className="Navigation__Item--XLink"
             >
               <XLogo
-                width="auto"
+                width="100%"
                 height={24}
                 aria-label="X公式アカウント"
                 className="Navigation__Item--XLogo"
