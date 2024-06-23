@@ -28,7 +28,7 @@ export const createFooter = () => {
     <div class="Footer__Bottom">
       <div class="Footer__Item--top">
         <a href="https://twitter.com/inialum" target="_blank" rel="noopener">
-          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="Navigation__Item--XLogo"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="Footer__Item--XLogo"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
         </a>
       </div>
       <div class="Footer__Item--small">
