@@ -18,6 +18,9 @@ export const createFooter = () => {
           <a href="/">ホーム</a>
         </li>
         <li class="Footer__Item">
+          <a href="/vision">私たちの思い</a>
+        </li>
+        <li class="Footer__Item">
           <a href="https://inialum.org/join">入会する</a>
         </li>
       </ul>
