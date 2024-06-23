@@ -6,33 +6,51 @@ import {
   type ComponentPropsWithRef,
   type MouseEvent,
 } from 'react'
+import { createPortal } from 'react-dom'
 import { RemoveScroll } from 'react-remove-scroll'
 
 import CrossIcon from '@/assets/cross_icon.svg?react'
 import InialumLogoWhiteTransparent from '@/assets/inialum_logo_white_transparent.svg?react'
 import XLogo from '@/assets/x_logo.svg?react'
 
-type Props = ComponentPropsWithRef<'dialog'> & {
+type Props = NavigationContentProps & {
+  portal?:
+    | true
+    | {
+        rootElement: Element
+      }
+}
+
+export const Navigation = ({ portal = true, ...rest }: Props) => {
+  if (portal) {
+    const rootElement = portal === true ? document.body : portal.rootElement
+    return createPortal(<NavigationContent {...rest} />, rootElement)
+  }
+
+  return <NavigationContent {...rest} />
+}
+
+type NavigationContentProps = ComponentPropsWithRef<'dialog'> & {
   isOpen: boolean
   onClose: () => void
 }
 
-export const Navigation = ({
-  isOpen = false,
+const NavigationContent = ({
+  isOpen,
   className,
-  onClose,
+  onClose: _onClose,
   ...rest
-}: Props) => {
+}: NavigationContentProps) => {
   const nowYear = new Date().getFullYear()
 
   const dialogRef = useRef<HTMLDialogElement>(null)
 
-  const _onClose = useCallback(() => {
+  const onClose = useCallback(() => {
     const dialogElem = dialogRef.current
     if (!dialogElem) return
     dialogElem.close()
-    onClose()
-  }, [onClose])
+    _onClose()
+  }, [_onClose])
 
   useEffect(() => {
     const dialogElem = dialogRef.current
@@ -56,15 +74,15 @@ export const Navigation = ({
       <dialog
         {...rest}
         ref={dialogRef}
-        onClick={_onClose}
+        onClick={onClose}
         className={clsx(className, 'Navigation')}
       >
         <button
           className="Navigation__CloseButton"
           aria-label="閉じる"
-          onClick={_onClose}
+          onClick={onClose}
         >
-          <CrossIcon width="24" height="24" />
+          <CrossIcon width="24" height="24" aria-hidden="true" />
         </button>
         <div className="Navigation__Content" onClick={onClickContent}>
           <div className="Navigation__Logo--mobile">
