@@ -64,7 +64,7 @@ export const Navigation = ({
           aria-label="閉じる"
           onClick={_onClose}
         >
-          <CrossIcon width="24" height="24" aria-label="閉じる" />
+          <CrossIcon width="24" height="24" />
         </button>
         <div className="Navigation__Content" onClick={onClickContent}>
           <div className="Navigation__Logo--mobile">
