@@ -57,6 +57,5 @@ export const Footer: CSSRuleObject = {
 
   '.Footer .Footer__Bottom .Footer__Item--XLogo': {
     '@apply h-24 md:h-32 fill-black': {},
-    aspectRatio: '23.4 / 24',
   },
 }

@@ -59,8 +59,6 @@ export const Navigation: CSSRuleObject = {
 
   '.Navigation__Item--XLogo': {
     '@apply h-24 fill-base-WHITE': {},
-
-    aspectRatio: '23.4 / 24',
   },
 
   '.Navigation__Item--small': {
