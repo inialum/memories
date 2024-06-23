@@ -25,6 +25,7 @@ export const Header = ({ hasNavigation = true, className, ...rest }: Props) => {
         <>
           <button
             className="Header__Navigation--button"
+            title="ナビゲーションメニュー"
             aria-label="ナビゲーションメニューを開く"
             onClick={onClick}
           >
