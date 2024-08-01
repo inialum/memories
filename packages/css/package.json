@@ -57,7 +57,7 @@
     "@types/postcss-js": "^4.0.4",
     "autoprefixer": "^10.4.19",
     "clsx": "^2.1.1",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.40",
     "postcss-js": "^4.0.1",
     "postcss-nesting": "^12.1.5",
     "storybook": "^8.1.5",
