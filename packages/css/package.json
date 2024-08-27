@@ -16,29 +16,17 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [
-    "css",
-    "design-system",
-    "tailwindcss",
-    "ui"
-  ],
+  "keywords": ["css", "design-system", "tailwindcss", "ui"],
   "engines": {
     "node": ">=20.0.0"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "./dist/**/*.js",
-    "./dist/**/*.d.ts"
-  ],
+  "files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
   "scripts": {
     "build": "tsup",
-    "lint": "pnpm run lint:check && pnpm run format:check",
-    "lint:check": "eslint --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
-    "lint:fix": "eslint --fix --cache \"**/*.{js,jsx,ts,tsx}\" --ignore-path ../../.gitignore .",
-    "format": "pnpm run format:fix",
-    "format:check": "prettier --cache --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format:fix": "prettier --cache --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
     "storybook:dev": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build",
     "typecheck": "tsc --noEmit"
