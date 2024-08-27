@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { useCallback, useState, type ComponentPropsWithRef } from 'react'
+import { type ComponentPropsWithRef, useCallback, useState } from 'react'
 
 import InialumLogoLightTransparent from '@/assets/inialum_logo_light_transparent.svg?react'
 import MenuIcon from '@/assets/menu_icon.svg?react'
@@ -24,6 +24,7 @@ export const Header = ({ hasNavigation = true, className, ...rest }: Props) => {
       {hasNavigation && (
         <>
           <button
+            type="button"
             className="Header__Navigation--button"
             title="ナビゲーションメニュー"
             aria-label="ナビゲーションメニューを開く"

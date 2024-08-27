@@ -1,4 +1,4 @@
-import { type CSSRuleObject } from 'tailwindcss/types/config'
+import type { CSSRuleObject } from 'tailwindcss/types/config'
 
 export const Button: CSSRuleObject = {
   '.Button': {

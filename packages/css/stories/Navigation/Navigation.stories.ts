@@ -1,6 +1,6 @@
 import { within } from '@storybook/test'
 
-import { createNavigation, type NavigationProps } from './Navigation'
+import { type NavigationProps, createNavigation } from './Navigation'
 
 import type { Meta, StoryObj } from '@storybook/html'
 

@@ -1,10 +1,10 @@
 import clsx from 'clsx'
 import {
+  type ComponentPropsWithRef,
+  type MouseEvent,
   useCallback,
   useEffect,
   useRef,
-  type ComponentPropsWithRef,
-  type MouseEvent,
 } from 'react'
 import { createPortal } from 'react-dom'
 import { RemoveScroll } from 'react-remove-scroll'
@@ -78,12 +78,14 @@ const NavigationContent = ({
         className={clsx(className, 'Navigation')}
       >
         <button
+          type="button"
           className="Navigation__CloseButton"
           aria-label="閉じる"
           onClick={onClose}
         >
           <CrossIcon width="24" height="24" aria-hidden="true" />
         </button>
+        {/* biome-ignore lint/a11y/useKeyWithClickEvents: Handle unintentional click with this handler */}
         <div className="Navigation__Content" onClick={onClickContent}>
           <div className="Navigation__Logo--mobile">
             <InialumLogoWhiteTransparent aria-label="INIALUM - INIAD Alumni Meetings" />
@@ -103,7 +105,7 @@ const NavigationContent = ({
                 <a
                   href="https://inialum.notion.site/364837260baa4486888554a2ea7666c6"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer noopener"
                 >
                   お問い合わせ
                 </a>
@@ -112,7 +114,7 @@ const NavigationContent = ({
                 <a
                   href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
                   target="_blank"
-                  rel="noopener"
+                  rel="noreferrer noopener"
                 >
                   Q&A
                 </a>
@@ -123,7 +125,7 @@ const NavigationContent = ({
             <a
               href="https://twitter.com/inialum"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer noopener"
               className="Navigation__Item--XLink"
             >
               <XLogo
@@ -135,28 +137,28 @@ const NavigationContent = ({
               <a
                 href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
               >
                 同窓会会則
               </a>
               <a
                 href="https://inialum.notion.site/4d2374f79b594f00b93c0efccf3c6bb4"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
               >
                 役員一覧
               </a>
               <a
                 href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
               >
                 プライバシーポリシー
               </a>
               <a
                 href="https://github.com/inialum"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
               >
                 GitHub
               </a>

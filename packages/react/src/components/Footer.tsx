@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { type ComponentPropsWithRef } from 'react'
+import type { ComponentPropsWithRef } from 'react'
 
 import InialumLogoLightTransparent from '@/assets/inialum_logo_light_transparent.svg?react'
 import XLogo from '@/assets/x_logo.svg?react'
@@ -47,25 +47,29 @@ export const Footer = ({ className, ...rest }: Props) => {
           <a
             href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             同窓会会則
           </a>
           <a
             href="https://inialum.notion.site/4d2374f79b594f00b93c0efccf3c6bb4"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             役員一覧
           </a>
           <a
             href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             プライバシーポリシー
           </a>
-          <a href="https://github.com/inialum" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/inialum"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             GitHub
           </a>
         </div>
