@@ -1,5 +1,5 @@
 import { memories } from '@inialum/memories-css'
-import { type Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 
 const config = {
   content: ['./src/**/*.{tsx,mdx}'],

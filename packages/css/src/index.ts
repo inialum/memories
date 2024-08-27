@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin'
 
 import { Button, ButtonLink, Footer, Header, Navigation } from '@/components'
 import { tailwindConfig } from '@/tailwind/config'
-import { type ConfigOptions } from '@/types'
+import type { ConfigOptions } from '@/types'
 
 const memories = plugin.withOptions<ConfigOptions>(
   (options) => {

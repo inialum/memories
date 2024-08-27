@@ -1,7 +1,0 @@
-{
-  "extends": ["@inialum/eslint-config/react", "prettier"],
-  "parserOptions": {
-    "project": ["./tsconfig.json", "./tsconfig.node.json"]
-  },
-  "ignorePatterns": ["!.storybook", "dist"]
-}
