@@ -6,12 +6,6 @@ updates:
       interval: "monthly"
     open-pull-requests-limit: 10
     groups:
-      linter-and-formatter:
-        patterns:
-          - "@inialum/eslint-config"
-          - "@typescript-eslint/*"
-          - "eslint*"
-          - "prettier"
       storybook:
         patterns:
           - "storybook*"
