@@ -50,7 +50,7 @@
     "@svgr/plugin-svgo": "^8.1.0",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitejs/plugin-react-swc": "^3.7.1",
     "autoprefixer": "^10.4.20",
     "eslint-plugin-react-refresh": "^0.4.11",
     "postcss": "^8.4.41",
