@@ -5,11 +5,11 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-		"typecheck": {
-			"dependsOn": ["^build", "^typecheck"]
-		},
-		"clean": {
-			"cache": false
-		}
+    "typecheck": {
+      "dependsOn": ["^build", "^typecheck"]
+    },
+    "clean": {
+      "cache": false
+    }
   }
 }
