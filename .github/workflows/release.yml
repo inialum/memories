@@ -1,39 +1,41 @@
 name: Release
-run-name: '${{github.event.inputs.versioning}} release'
+
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/**'
   workflow_dispatch:
-    inputs:
-      versioning:
-        description: 'Versioning'
-        required: true
-        default: 'canary'
-        type: choice
-        options:
-          - major
-          - minor
-          - patch
-          - canary
-      package:
-        description: 'Target package'
-        required: true
-        default: '@inialum/memories-css'
-        type: choice
-        options:
-          - '@inialum/memories-css'
-          - '@inialum/memories-react'
 
 jobs:
-  test:
+  test_ci:
+    name: Run Test CI
+    uses: ./.github/workflows/test.yml
+
+  release:
+    needs: test_ci
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
+    if: github.repository == 'inialum/memories'
     permissions:
-      contents: read
-    env:
-      TURBO_CACHE_DIR: .turbo
+      contents: write
+      id-token: write
+      pull-requests: write
 
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.INIALUM_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.INIALUM_AUTOMATION_PRIVATE_KEY }}
+
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: ${{ github.head_ref }}
+          persist-credentials: false
 
       - name: Setup cache for Turborepo
         uses: actions/cache@v4
@@ -43,55 +45,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9.1.0
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.app-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 'lts/*'
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Run typecheck
-        run: pnpm run typecheck
-
-      - name: Run linter
-        run: pnpm run lint
-
-  release:
-    needs: test
-    runs-on: ubuntu-latest
-    timeout-minutes: 3
-    if: github.repository == 'inialum/memories'
-    permissions:
-      contents: write
-      id-token: write
-    defaults:
-      run:
-        working-directory: packages/${{ contains(github.event.inputs.package, '@inialum/memories-css') && 'css' || 'react' }}
-
-    steps:
-      - uses: actions/create-github-app-token@v1
-        id: app-token
-        with:
-          app-id: ${{ vars.INIALUM_AUTOMATION_APP_ID }}
-          private-key: ${{ secrets.INIALUM_AUTOMATION_PRIVATE_KEY }}
-
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ steps.app-token.outputs.token }}
-          ref: ${{ github.head_ref }}
-          persist-credentials: false
+      - name: Configure Git
+        run: |
+          git config user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+          git config user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: latest
+        uses: pnpm/action-setup@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -100,72 +66,20 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'inialum-automation[bot]'
-          git config --global user.email '165284237+inialum-automation[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
-        env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build package
+      - name: Build packages
         run: pnpm build
 
-      - name: Update canary version
-        if: contains(github.event.inputs.versioning, 'canary')
-        run: pnpm version prerelease
-
-      - name: Update patch version
-        if: contains(github.event.inputs.versioning, 'patch')
-        run: pnpm version patch
-
-      - name: Update minor version
-        if: contains(github.event.inputs.versioning, 'minor')
-        run: pnpm version minor
-
-      - name: Update major version
-        if: contains(github.event.inputs.versioning, 'major')
-        run: pnpm version major
-
-      - name: Generate version name
-        id: generate_version_name
-        run: echo "value=${{ github.event.inputs.package }}@$(pnpm pkg get version | sed 's/"//g')" >> $GITHUB_OUTPUT
-
-      - name: Commit changes
-        run: >-
-          git add ./package.json &&
-          git commit -m "Release ${{ steps.generate_version_name.outputs.value }}" &&
-          git tag -a "${{ steps.generate_version_name.outputs.value }}" -m "Release ${{ steps.generate_version_name.outputs.value }}"
-        env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-
-      - name: Push changes
-        run: git push --follow-tags origin HEAD
-        env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-
-      - name: Publish canary package to npm
-        if: contains(github.event.inputs.versioning, 'canary')
-        run: pnpm publish --provenance --tag canary
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-
-      - name: Publish package to npm
-        if: contains(github.event.inputs.versioning , 'canary') != true
-        run: pnpm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-
-      - name: Create release note
-        uses: actions/github-script@v7
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
         with:
-          github-token: ${{ steps.app-token.outputs.token }}
-          script: |
-            await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: "${{ steps.generate_version_name.outputs.value }}",
-              generate_release_notes: true,
-              prerelease: ${{ contains(github.event.inputs.versioning, 'canary') }}
-            });
+          setupGitUser: false
+          createGithubReleases: true
+          version: pnpm version:ci
+          publish: pnpm publish:ci
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}

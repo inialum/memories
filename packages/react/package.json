@@ -14,7 +14,8 @@
     "url": "https://github.com/inialum/memories"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "keywords": ["react", "design-system", "tailwindcss", "ui"],
   "engines": {
