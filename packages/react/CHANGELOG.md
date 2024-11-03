@@ -1,5 +1,16 @@
 # @inialum/memories-react
 
+## 0.4.0
+
+### Minor Changes
+
+- [#114](https://github.com/inialum/memories/pull/114) [`92494ee`](https://github.com/inialum/memories/commit/92494eebdd4f73267fbfdda7c1b7d39f8200bc39) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Add new contact page link
+
+### Patch Changes
+
+- Updated dependencies [[`92494ee`](https://github.com/inialum/memories/commit/92494eebdd4f73267fbfdda7c1b7d39f8200bc39)]:
+  - @inialum/memories-css@0.3.2
+
 ## 0.3.1
 
 ### Patch Changes
