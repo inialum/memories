@@ -1,8 +1,8 @@
 export const createFooter = () => {
-  const footerElem = document.createElement('footer')
-  const nowYear = new Date().getFullYear()
+	const footerElem = document.createElement('footer')
+	const nowYear = new Date().getFullYear()
 
-  footerElem.innerHTML = `
+	footerElem.innerHTML = `
   <footer class="Footer">
     <div class="Footer__Head">
       <div class="Footer__Logo">
@@ -64,5 +64,5 @@ export const createFooter = () => {
   </footer>
 `
 
-  return footerElem
+	return footerElem
 }

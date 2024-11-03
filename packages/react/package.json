@@ -1,71 +1,71 @@
 {
-  "name": "@inialum/memories-react",
-  "version": "0.3.0",
-  "description": "React component library for the Memories - INIALUM Design System",
-  "type": "module",
-  "author": {
-    "name": "INIALUM - INIAD Alumni Meetings",
-    "email": "contact@inialum.org",
-    "url": "https://inialum.org"
-  },
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/inialum/memories"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
-  "keywords": ["react", "design-system", "tailwindcss", "ui"],
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
-  "scripts": {
-    "build": "vite build",
-    "lint": "biome check",
-    "lint:fix": "biome check --write",
-    "storybook:dev": "storybook dev -p 6007 --no-open",
-    "storybook:build": "storybook build",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "react-remove-scroll": "^2.5.10"
-  },
-  "devDependencies": {
-    "@inialum/memories-css": "workspace:*",
-    "@storybook/addon-a11y": "^8.2.9",
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/addon-interactions": "^8.2.9",
-    "@storybook/addon-links": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/manager-api": "^8.2.9",
-    "@storybook/react": "^8.2.9",
-    "@storybook/react-vite": "^8.2.9",
-    "@storybook/test": "^8.2.9",
-    "@storybook/theming": "^8.2.9",
-    "@svgr/plugin-svgo": "^8.1.0",
-    "@types/react": "^18.3.4",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react-swc": "^3.7.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "storybook": "^8.2.9",
-    "tailwindcss": "^3.4.10",
-    "vite": "^5.4.2",
-    "vite-plugin-dts": "^4.0.3",
-    "vite-plugin-svgr": "^4.2.0"
-  },
-  "peerDependencies": {
-    "@inialum/memories-css": ">= 0.0.1",
-    "react": ">= 18.2.0",
-    "react-dom": ">= 18.2.0",
-    "tailwindcss": ">= 3.0.0"
-  }
+	"name": "@inialum/memories-react",
+	"version": "0.3.0",
+	"description": "React component library for the Memories - INIALUM Design System",
+	"type": "module",
+	"author": {
+		"name": "INIALUM - INIAD Alumni Meetings",
+		"email": "contact@inialum.org",
+		"url": "https://inialum.org"
+	},
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/inialum/memories"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"keywords": ["react", "design-system", "tailwindcss", "ui"],
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": ["./dist/**/*.js", "./dist/**/*.d.ts"],
+	"scripts": {
+		"build": "vite build",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"storybook:dev": "storybook dev -p 6007 --no-open",
+		"storybook:build": "storybook build",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"react-remove-scroll": "^2.5.10"
+	},
+	"devDependencies": {
+		"@inialum/memories-css": "workspace:*",
+		"@storybook/addon-a11y": "^8.2.9",
+		"@storybook/addon-essentials": "^8.2.9",
+		"@storybook/addon-interactions": "^8.2.9",
+		"@storybook/addon-links": "^8.2.9",
+		"@storybook/blocks": "^8.2.9",
+		"@storybook/manager-api": "^8.2.9",
+		"@storybook/react": "^8.2.9",
+		"@storybook/react-vite": "^8.2.9",
+		"@storybook/test": "^8.2.9",
+		"@storybook/theming": "^8.2.9",
+		"@svgr/plugin-svgo": "^8.1.0",
+		"@types/react": "^18.3.4",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react-swc": "^3.7.0",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.41",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"storybook": "^8.2.9",
+		"tailwindcss": "^3.4.10",
+		"vite": "^5.4.2",
+		"vite-plugin-dts": "^4.0.3",
+		"vite-plugin-svgr": "^4.2.0"
+	},
+	"peerDependencies": {
+		"@inialum/memories-css": ">= 0.0.1",
+		"react": ">= 18.2.0",
+		"react-dom": ">= 18.2.0",
+		"tailwindcss": ">= 3.0.0"
+	}
 }
