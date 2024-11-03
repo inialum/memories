@@ -102,13 +102,7 @@ const NavigationContent = ({
 								<a href="https://inialum.org/join">入会する</a>
 							</li>
 							<li className="Navigation__Item">
-								<a
-									href="https://inialum.notion.site/364837260baa4486888554a2ea7666c6"
-									target="_blank"
-									rel="noreferrer noopener"
-								>
-									お問い合わせ
-								</a>
+								<a href="/contact">お問い合わせ</a>
 							</li>
 							<li className="Navigation__Item">
 								<a
