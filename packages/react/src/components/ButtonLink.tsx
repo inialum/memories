@@ -21,7 +21,7 @@ export const ButtonLink = ({
 }: Props) => {
 	let rel = _rel
 	if (rest.target === '_blank' && typeof rel === 'undefined') {
-		rel = 'noopener'
+		rel = 'noreferrer noopener'
 	}
 	return (
 		<a

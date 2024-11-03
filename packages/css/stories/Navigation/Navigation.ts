@@ -28,19 +28,13 @@ export const createNavigation = (_props: NavigationProps) => {
             <a href="https://inialum.org/join">入会する</a>
           </li>
           <li class="Navigation__Item">
-            <a
-              href="https://inialum.notion.site/364837260baa4486888554a2ea7666c6"
-              target="_blank"
-              rel="noopener"
-            >
-              お問い合わせ
-            </a>
+            <a href="/contact">お問い合わせ</a>
           </li>
           <li class="Navigation__Item">
             <a
               href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer noopener"
             >
               Q&A
             </a>
@@ -48,32 +42,32 @@ export const createNavigation = (_props: NavigationProps) => {
         </ul>
       </nav>
       <div class="Navigation__Content--bottom">
-        <a href="https://twitter.com/inialum" target="_blank" rel="noopener" class="Navigation__Item--XLink">
+        <a href="https://twitter.com/inialum" target="_blank" rel="noreferrer noopener" class="Navigation__Item--XLink">
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="Navigation__Item--XLogo"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
         </a>
         <div class="Navigation__Item--small">
           <a
             href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             同窓会会則
           </a>
           <a
             href="https://inialum.notion.site/4d2374f79b594f00b93c0efccf3c6bb4"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             役員一覧
           </a>
           <a
             href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             プライバシーポリシー
           </a>
-          <a href="https://github.com/inialum" target="_blank" rel="noopener">
+          <a href="https://github.com/inialum" target="_blank" rel="noreferrer noopener">
             GitHub
           </a>
         </div>

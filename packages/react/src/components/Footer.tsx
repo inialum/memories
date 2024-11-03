@@ -28,6 +28,18 @@ export const Footer = ({ className, ...rest }: Props) => {
 					<li className="Footer__Item">
 						<a href="https://inialum.org/join">入会する</a>
 					</li>
+					<li className="Footer__Item">
+						<a href="/contact">お問い合わせ</a>
+					</li>
+					<li className="Footer__Item">
+						<a
+							href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							Q&A
+						</a>
+					</li>
 				</ul>
 			</nav>
 			<div className="Footer__Bottom">
@@ -35,7 +47,7 @@ export const Footer = ({ className, ...rest }: Props) => {
 					<a
 						href="https://twitter.com/inialum"
 						target="_blank"
-						rel="noopener noreferrer"
+						rel="noreferrer noopener"
 					>
 						<XLogo
 							aria-label="X公式アカウント"
