@@ -6,8 +6,8 @@ import type { Meta, StoryObj } from '@storybook/html'
 
 const meta = {
 	title: 'Navigation',
-	tags: ['autodocs'],
 	render: (args) => createNavigation(args),
+	tags: ['!autodocs'],
 } satisfies Meta<NavigationProps>
 
 export default meta

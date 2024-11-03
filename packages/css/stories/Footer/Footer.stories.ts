@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from '@storybook/html'
 
 const meta = {
 	title: 'Footer',
-	tags: ['autodocs'],
 	render: () => createFooter(),
 } satisfies Meta
 

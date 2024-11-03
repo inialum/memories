@@ -4,7 +4,6 @@ import type { Meta, StoryObj } from '@storybook/html'
 
 const meta = {
 	title: 'ButtonLink',
-	tags: ['autodocs'],
 	render: ({ label, ...args }) => createButtonLink({ label, ...args }),
 	argTypes: {
 		label: { control: 'text' },
