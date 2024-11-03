@@ -21,7 +21,7 @@ export const createButtonLink = ({
 	const buttonLinkElem = document.createElement('a')
 	buttonLinkElem.innerText = label
 	if (rest.target === '_blank' && typeof rest.rel === 'undefined') {
-		buttonLinkElem.rel = 'noopener noreferrer'
+		buttonLinkElem.rel = 'noreferrer noopener'
 	}
 
 	buttonLinkElem.className = clsx(
