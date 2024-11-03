@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming/create'
 
 export default create({
-  base: 'light',
-  brandTitle: 'memories-react',
+	base: 'light',
+	brandTitle: 'memories-react',
 })

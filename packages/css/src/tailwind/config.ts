@@ -4,10 +4,10 @@ import { colors, spacing } from '@/foundations'
 
 type TailwindConfig = Omit<Config, 'content'>
 export const tailwindConfig: TailwindConfig = {
-  theme: {
-    extend: {
-      colors,
-      spacing,
-    },
-  },
+	theme: {
+		extend: {
+			colors,
+			spacing,
+		},
+	},
 }

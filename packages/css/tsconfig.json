@@ -1,18 +1,18 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@memories-css/*": ["./*"]
-    }
-  },
-  "include": [
-    "src",
-    "stories",
-    ".storybook/**/*.ts",
-    ".storybook/**/*.tsx",
-    "tailwind.config.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@memories-css/*": ["./*"]
+		}
+	},
+	"include": [
+		"src",
+		"stories",
+		".storybook/**/*.ts",
+		".storybook/**/*.tsx",
+		"tailwind.config.ts"
+	],
+	"references": [{ "path": "./tsconfig.node.json" }]
 }

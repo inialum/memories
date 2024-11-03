@@ -1,11 +1,11 @@
 export type NavigationProps = HTMLDialogElement
 
 export const createNavigation = (_props: NavigationProps) => {
-  const navigationElem = document.createElement('dialog')
-  navigationElem.className = 'Navigation'
-  const nowYear = new Date().getFullYear()
+	const navigationElem = document.createElement('dialog')
+	navigationElem.className = 'Navigation'
+	const nowYear = new Date().getFullYear()
 
-  navigationElem.innerHTML = `
+	navigationElem.innerHTML = `
     <div class="Navigation__Content">
       <button class="Navigation__CloseButton" aria-label="閉じる" id="closeButton">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -84,13 +84,13 @@ export const createNavigation = (_props: NavigationProps) => {
     </div>
   `
 
-  const onClose = () => {
-    navigationElem.close()
-  }
+	const onClose = () => {
+		navigationElem.close()
+	}
 
-  navigationElem
-    .querySelector('#closeButton')
-    ?.addEventListener('click', onClose)
+	navigationElem
+		.querySelector('#closeButton')
+		?.addEventListener('click', onClose)
 
-  return navigationElem
+	return navigationElem
 }

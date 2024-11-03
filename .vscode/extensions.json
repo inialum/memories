@@ -1,8 +1,8 @@
 {
-  "recommendations": [
-    "streetsidesoftware.code-spell-checker",
-    "bradlc.vscode-tailwindcss",
-    "unifiedjs.vscode-mdx",
-    "biomejs.biome"
-  ]
+	"recommendations": [
+		"streetsidesoftware.code-spell-checker",
+		"bradlc.vscode-tailwindcss",
+		"unifiedjs.vscode-mdx",
+		"biomejs.biome"
+	]
 }

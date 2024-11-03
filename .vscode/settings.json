@@ -1,49 +1,49 @@
 {
-  "cSpell.words": [
-    "astro",
-    "astrojs",
-    "clsx",
-    "Hono",
-    "INIAD",
-    "INIALUM",
-    "Miniflare",
-    "noindex",
-    "nosniff",
-    "openapi",
-    "svgr",
-    "tsconfigs",
-    "tsup"
-  ],
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "biomejs.biome",
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit"
-  },
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifierEnding": "minimal",
-  "typescript.referencesCodeLens.enabled": true,
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
-  "editor.quickSuggestions": {
-    "strings": "on"
-  }
+	"cSpell.words": [
+		"astro",
+		"astrojs",
+		"clsx",
+		"Hono",
+		"INIAD",
+		"INIALUM",
+		"Miniflare",
+		"noindex",
+		"nosniff",
+		"openapi",
+		"svgr",
+		"tsconfigs",
+		"tsup"
+	],
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit"
+	},
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"typescript.preferences.importModuleSpecifierEnding": "minimal",
+	"typescript.referencesCodeLens.enabled": true,
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	}
 }
