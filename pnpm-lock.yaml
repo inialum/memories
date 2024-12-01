@@ -19,7 +19,7 @@ importers:
         version: 2.27.9
       '@types/node':
         specifier: ^20.16.1
-        version: 22.8.7
+        version: 20.17.9
       turbo:
         specifier: ^2.2.3
         version: 2.2.3
@@ -81,8 +81,8 @@ importers:
         specifier: ^8.4.1
         version: 8.4.1(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.14
+        specifier: ^3.4.15
+        version: 3.4.15
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(@microsoft/api-extractor@7.47.11(@types/node@22.8.7))(@swc/core@1.7.42)(jiti@2.4.0)(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
@@ -157,8 +157,8 @@ importers:
         specifier: ^8.4.1
         version: 8.4.1(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.14
-        version: 3.4.14
+        specifier: ^3.4.15
+        version: 3.4.15
       vite:
         specifier: ^5.4.10
         version: 5.4.10(@types/node@22.8.7)
@@ -1238,6 +1238,9 @@ packages:
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
+
+  '@types/node@20.17.9':
+    resolution: {integrity: sha512-0JOXkRyLanfGPE2QRCwgxhzlBAvaRdCNMcvbd7jFfpmD4eEXll7LRwy5ymJmyeZqk7Nh7eD2LeUyQ68BbndmXw==}
 
   '@types/node@22.8.7':
     resolution: {integrity: sha512-LidcG+2UeYIWcMuMUpBKOnryBWG/rnmOHQR5apjn8myTQcx3rinFRn7DcIFhMnS0PPFSC6OafdIKEad0lj6U0Q==}
@@ -2665,8 +2668,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tailwindcss@3.4.14:
-    resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
+  tailwindcss@3.4.15:
+    resolution: {integrity: sha512-r4MeXnfBmSOuKUWmXe6h2CcyfzJCEk4F0pptO5jlnYSIViUkVmsawj80N5h2lO3gwcmSb4n3PuN+e+GC1Guylw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4085,7 +4088,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.8.7
+      '@types/node': 20.17.9
 
   '@types/mdx@2.0.13': {}
 
@@ -4093,9 +4096,14 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
+  '@types/node@20.17.9':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/node@22.8.7':
     dependencies:
       undici-types: 6.19.8
+    optional: true
 
   '@types/postcss-js@4.0.4':
     dependencies:
@@ -5475,7 +5483,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
 
-  tailwindcss@3.4.14:
+  tailwindcss@3.4.15:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
