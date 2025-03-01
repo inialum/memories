@@ -24,7 +24,7 @@
 		"@changesets/cli": "^2.27.9",
 		"@types/node": "^20.16.1",
 		"turbo": "^2.2.3",
-		"typescript": "^5.6.3"
+		"typescript": "^5.8.2"
 	},
 	"packageManager": "pnpm@9.12.3+sha256.24235772cc4ac82a62627cd47f834c72667a2ce87799a846ec4e8e555e2d4b8b"
 }
