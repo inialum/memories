@@ -18,13 +18,20 @@
 		"access": "public",
 		"provenance": true
 	},
-	"keywords": ["css", "design-system", "tailwindcss", "ui"],
+	"keywords": [
+		"css",
+		"design-system",
+		"tailwindcss",
+		"ui"
+	],
 	"engines": {
 		"node": ">=20.0.0"
 	},
 	"main": "./dist/index.css",
 	"types": "./dist/index.d.ts",
-	"files": ["./dist/**/*.css"],
+	"files": [
+		"./dist/**/*.css"
+	],
 	"exports": {
 		".": "./dist/index.css"
 	},
