@@ -1,37 +1,25 @@
-# @inialum/memories-css
+# @inialum/memories-tailwind-theme
 
-[![npm version](https://img.shields.io/npm/v/%40inialum%2Fmemories-css?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600)](https://www.npmjs.com/package/@inialum/memories-css)
+[![npm version](https://img.shields.io/npm/v/%40inialum%2Fmemories-tailwind-theme?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600)](https://www.npmjs.com/package/@inialum/memories-tailwind-theme)
 
-Fundamental CSS styles for the Memories - INIALUM Design System.  
-This library is provided as a Tailwind CSS plugin.
-
-- [Storybook](https://memories-css.pages.dev)
+Tailwind CSS v4 theme for the Memories - INIALUM Design System.
 
 ## Installation
 
-Before installing this package, make sure you have installed [Tailwind CSS](https://tailwindcss.com/docs/installation).
-
 ```bash
-pnpm add -D @inialum/memories-css
+pnpm add -D tailwindcss @inialum/memories-tailwind-theme
 ```
 
-## Tailwind CSS Configuration
+## Usage
 
-You should add the `memories` plugin to your `tailwind.config.[ts|js|cjs]`.
+Import the theme in your CSS file:
 
-```ts
-// tailwind.config.ts
-
-import { memories } from '@inialum/memories-css'
-import { type Config } from 'tailwindcss'
-
-const config = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  plugins: [memories],
-} satisfies Config
-
-export default config
+```css
+@import 'tailwindcss';
+@import '@inialum/memories-tailwind-theme';
 ```
+
+That's it! You can now use Tailwind utility classes with the Memories theme.
 
 ## License
 

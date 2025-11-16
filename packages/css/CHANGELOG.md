@@ -1,4 +1,4 @@
-# @inialum/memories-css
+# @inialum/memories-tailwind-theme
 
 ## 0.3.2
 
