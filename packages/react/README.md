@@ -8,35 +8,83 @@ React component library for the Memories - INIALUM Design System.
 
 ## Installation
 
-Before installing this package, make sure you have installed [Tailwind CSS](https://tailwindcss.com/docs/installation).
+This package requires [Tailwind CSS](https://tailwindcss.com/docs/installation) and React 19.
 
 ```bash
-pnpm add -D @inialum/memories-css @inialum/memories-react
+pnpm add @inialum/memories-tailwind-theme @inialum/memories-react
+pnpm add -D tailwindcss
 ```
 
-## Tailwind CSS Configuration
+## Setup
 
-You should add the `memories` plugin to your `tailwind.config.[ts|js|cjs]`.  
-Also, you should add the `@inialum/memories-react` to the `content` option.
+### 1. Import CSS Styles
+
+Import the Memories CSS theme in your global CSS file:
+
+```css
+/* src/index.css or src/app.css */
+@import 'tailwindcss';
+@import '@inialum/memories-tailwind-theme';
+```
+
+### 2. Add data-theme Attribute
+
+Add the `data-theme` attribute to your HTML:
+
+```html
+<!doctype html>
+<html lang="en" data-theme="memories">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+### 3. Tailwind CSS Configuration
+
+Update your `tailwind.config.ts`:
 
 ```ts
 // tailwind.config.ts
-
-import { memories } from '@inialum/memories-css'
-import { type Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss'
 
 const config = {
   content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-
-    // Do not forget to add this line!
+    './src/**/*.{ts,tsx}',
     './node_modules/@inialum/memories-react/**/*.js',
   ],
-  plugins: [memories],
 } satisfies Config
 
 export default config
 ```
+
+## Usage
+
+```tsx
+import { Button } from '@inialum/memories-react'
+
+function App() {
+  return (
+    <Button variant="filled" color="primary" size="medium">
+      Click me
+    </Button>
+  )
+}
+```
+
+## Components
+
+- Button
+- ButtonLink
+- Footer
+- Header
+- Navigation
+
+See [Storybook](https://memories-react.pages.dev) for detailed documentation and examples.
 
 ## License
 

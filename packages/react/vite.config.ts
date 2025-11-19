@@ -1,13 +1,14 @@
-import { resolve } from 'node:path'
-
+import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react-swc'
+import { globbySync } from 'globby'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import svgr from 'vite-plugin-svgr'
 
+import pkg from './package.json'
+
 export default defineConfig({
 	plugins: [
-		react(),
 		svgr({
 			svgrOptions: {
 				svgoConfig: {
@@ -17,30 +18,33 @@ export default defineConfig({
 		}),
 		dts({
 			include: 'src',
+			staticImport: true,
 		}),
+		tailwindcss(),
+		react(),
 	],
 	build: {
+		target: 'esnext',
+		minify: false,
+		sourcemap: true,
 		lib: {
-			entry: resolve(__dirname, 'src/index.ts'),
-			name: '@inialum/memories-react',
-			fileName: 'index',
 			formats: ['es'],
+			entry: globbySync(['src/**/index.ts']),
+			fileName: 'index.js',
 		},
 		rollupOptions: {
-			external: ['react'],
+			external: [
+				...Object.keys(pkg.dependencies ?? {}),
+				...Object.keys(pkg.peerDependencies ?? {}),
+				'react/jsx-runtime',
+			],
+			output: {
+				format: 'es',
+				preserveModules: true,
+				preserveModulesRoot: 'src',
+				exports: 'named',
+				entryFileNames: '[name].js',
+			},
 		},
-		sourcemap: true,
-	},
-	resolve: {
-		alias: [
-			{
-				find: '@memories-react',
-				replacement: resolve(__dirname, '.'),
-			},
-			{
-				find: '@',
-				replacement: resolve(__dirname, './src'),
-			},
-		],
 	},
 })

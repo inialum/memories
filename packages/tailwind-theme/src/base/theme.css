@@ -1,0 +1,51 @@
+/* Base Theme Configuration */
+
+@theme {
+	/* Spacing Scale */
+	--spacing: 0.0625rem;
+
+	/* Color Palette - Blue */
+	--color-blue-100: #f2f8fa;
+	--color-blue-200: #cceffb;
+	--color-blue-300: #2ed3ff;
+	--color-blue-400: #00b0eb;
+	--color-blue-500: #006a8d;
+	--color-blue-600: #003547;
+
+	/* Color Palette - Pink */
+	--color-pink-100: #feeaf8;
+	--color-pink-200: #fdd5f2;
+	--color-pink-300: #f62dbd;
+	--color-pink-400: #b41387;
+	--color-pink-500: #7a0159;
+
+	/* Color Palette - Gray */
+	--color-gray-100: #003547;
+	--color-gray-200: #e7e8e8;
+	--color-gray-300: #c4c6c7;
+	--color-gray-400: #a6a8a9;
+	--color-gray-500: #898b8c;
+	--color-gray-600: #4d5051;
+	--color-gray-700: #2e3031;
+
+	/* Base Colors */
+	--color-base-white: #ffffff;
+	--color-base-black: #221716;
+	--color-base-block: #f2f8fa;
+
+	/* Primary Colors */
+	--color-primary: var(--color-blue-400);
+	--color-primary-light: var(--color-blue-300);
+
+	/* Accent Colors */
+	--color-accent: var(--color-pink-300);
+	--color-accent-light: var(--color-pink-200);
+	--color-accent-dark: var(--color-pink-400);
+
+	/* Semantic Colors */
+	--color-error: #ca1206;
+	--color-warning: #c7a805;
+
+	/* Font Sizes */
+	--text-2xs: 0.5rem;
+}

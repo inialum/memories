@@ -1,19 +1,15 @@
-import { dirname, join, resolve } from 'node:path'
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import type { StorybookConfig } from '@storybook/react-vite'
 
-// biome-ignore lint/suspicious/noExplicitAny: Suppressing this error because the type of `getAbsolutePath` is not explicitly defined in the Storybook API.
-const getAbsolutePath = (packageName: string): any =>
-	dirname(require.resolve(join(packageName, 'package.json')))
-
 const config: StorybookConfig = {
-	stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(ts|tsx)'],
+	stories: ['../stories/**/*.mdx', '../src/components/**/*.stories.@(ts|tsx)'],
 
 	addons: [
 		getAbsolutePath('@storybook/addon-links'),
-		getAbsolutePath('@storybook/addon-essentials'),
-		getAbsolutePath('@storybook/addon-interactions'),
 		getAbsolutePath('@storybook/addon-a11y'),
+		getAbsolutePath('@storybook/addon-docs'),
 	],
 
 	framework: {
@@ -25,18 +21,6 @@ const config: StorybookConfig = {
 		return {
 			...config,
 			define: { 'process.env': {} }, // Workaround for "process is not defined" error. NOTE: https://github.com/storybookjs/storybook/issues/18920#issuecomment-1310602214
-			resolve: {
-				alias: [
-					{
-						find: '@memories-css',
-						replacement: resolve(__dirname, '../'),
-					},
-					{
-						find: '@',
-						replacement: resolve(__dirname, '../src'),
-					},
-				],
-			},
 		}
 	},
 
@@ -45,3 +29,7 @@ const config: StorybookConfig = {
 	},
 }
 export default config
+
+function getAbsolutePath(value: string) {
+	return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)))
+}
