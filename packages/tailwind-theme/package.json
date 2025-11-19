@@ -1,6 +1,6 @@
 {
 	"name": "@inialum/memories-tailwind-theme",
-	"version": "0.3.2",
+	"version": "1.0.0",
 	"description": "Tailwind CSS theme for the Memories - INIALUM Design System",
 	"type": "module",
 	"author": {
