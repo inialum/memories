@@ -45,4 +45,7 @@
 	/* Semantic Colors */
 	--color-error: #ca1206;
 	--color-warning: #c7a805;
+
+	/* Font Sizes */
+	--text-2xs: 0.5rem;
 }
