@@ -1,11 +1,5 @@
 {
 	"extends": "../../tsconfig.base.json",
-	"compilerOptions": {
-		"paths": {
-			"@/*": ["./src/*"],
-			"@memories-react/*": ["./*"]
-		}
-	},
 	"include": ["src", "stories", ".storybook/**/*.ts", ".storybook/**/*.tsx"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }
