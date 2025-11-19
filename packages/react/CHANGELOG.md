@@ -1,5 +1,16 @@
 # @inialum/memories-react
 
+## 1.0.0
+
+### Major Changes
+
+- [#150](https://github.com/inialum/memories/pull/150) [`da31d3e`](https://github.com/inialum/memories/commit/da31d3e690ee4bdba10bef757af47a0ea43c8929) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Replace memories-css to memories-tailwind-theme
+
+### Patch Changes
+
+- Updated dependencies [[`da31d3e`](https://github.com/inialum/memories/commit/da31d3e690ee4bdba10bef757af47a0ea43c8929)]:
+  - @inialum/memories-tailwind-theme@1.0.0
+
 ## 0.4.0
 
 ### Minor Changes

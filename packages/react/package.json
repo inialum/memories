@@ -1,6 +1,6 @@
 {
 	"name": "@inialum/memories-react",
-	"version": "0.4.0",
+	"version": "1.0.0",
 	"description": "React component library for the Memories - INIALUM Design System",
 	"type": "module",
 	"author": {
@@ -81,7 +81,7 @@
 		"vite-plugin-svgr": "^4.5.0"
 	},
 	"peerDependencies": {
-		"@inialum/memories-tailwind-theme": ">=0.3.2",
+		"@inialum/memories-tailwind-theme": ">=1.0.0",
 		"react": ">= 19.0.0",
 		"react-dom": ">= 19.0.0",
 		"tailwindcss": ">= 4.0.0"
