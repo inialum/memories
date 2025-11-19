@@ -38,8 +38,7 @@
 	"scripts": {
 		"build": "vite build",
 		"lint": "biome check",
-		"fix": "biome check --write",
-		"typecheck": "tsc --noEmit"
+		"fix": "biome check --write"
 	},
 	"devDependencies": {
 		"tailwindcss": "^4.1.17",
