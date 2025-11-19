@@ -5,10 +5,6 @@ import { ButtonLink } from './ButtonLink'
 const meta = {
 	title: 'Components/ButtonLink',
 	component: ButtonLink,
-	parameters: {
-		layout: 'centered',
-	},
-	tags: ['autodocs'],
 } satisfies Meta<typeof ButtonLink>
 export default meta
 type Story = StoryObj<typeof meta>
