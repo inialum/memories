@@ -9,9 +9,9 @@ import {
 import { createPortal } from 'react-dom'
 import { RemoveScroll } from 'react-remove-scroll'
 
-import CrossIcon from '@/assets/cross_icon.svg?react'
-import InialumLogoWhiteTransparent from '@/assets/inialum_logo_white_transparent.svg?react'
-import XLogo from '@/assets/x_logo.svg?react'
+import CrossIcon from '../../assets/cross_icon.svg?react'
+import InialumLogoWhiteTransparent from '../../assets/inialum_logo_white_transparent.svg?react'
+import XLogo from '../../assets/x_logo.svg?react'
 
 type Props = NavigationContentProps & {
 	portal?:
@@ -71,40 +71,53 @@ const NavigationContent = ({
 
 	return (
 		<RemoveScroll removeScrollBar enabled={isOpen}>
+			{/** biome-ignore lint/a11y/useKeyWithClickEvents: Due to the dialog element handling keyboard interactions internally */}
 			<dialog
 				{...rest}
 				ref={dialogRef}
 				onClick={onClose}
-				className={clsx(className, 'Navigation')}
+				className={clsx(
+					'bg-blue-600 text-base-white',
+					'm-0 p-0 max-w-full max-h-full h-svh left-full -translate-x-full sm:w-372 w-full',
+					className,
+				)}
+				style={{ transition: 'opacity .5s' }}
 			>
+				{/* Close Button */}
 				<button
 					type="button"
-					className="Navigation__CloseButton"
+					className="absolute top-20 right-20 p-4 fill-base-white"
 					aria-label="閉じる"
 					onClick={onClose}
 				>
 					<CrossIcon width="24" height="24" aria-hidden="true" />
 				</button>
+
+				{/* Content */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: Handle unintentional click with this handler */}
-				<div className="Navigation__Content" onClick={onClickContent}>
-					<div className="Navigation__Logo--mobile">
+				{/** biome-ignore lint/a11y/noStaticElementInteractions: Handle unintentional click with this handler */}
+				<div className="w-full h-full" onClick={onClickContent}>
+					{/* Logo - Mobile Only */}
+					<div className="object-cover h-160 w-160 p-12 sm:hidden">
 						<InialumLogoWhiteTransparent aria-label="INIALUM - INIAD Alumni Meetings" />
 					</div>
+
+					{/* Navigation */}
 					<nav>
-						<ul className="Navigation__Content--main">
-							<li className="Navigation__Item">
+						<ul className="flex flex-col justify-center gap-y-32 px-36 py-32 sm:mt-160">
+							<li className="font-bold text-12">
 								<a href="/">ホーム</a>
 							</li>
-							<li className="Navigation__Item">
+							<li className="font-bold text-12">
 								<a href="/vision">私たちの思い</a>
 							</li>
-							<li className="Navigation__Item">
+							<li className="font-bold text-12">
 								<a href="https://inialum.org/join">入会する</a>
 							</li>
-							<li className="Navigation__Item">
+							<li className="font-bold text-12">
 								<a href="/contact">お問い合わせ</a>
 							</li>
-							<li className="Navigation__Item">
+							<li className="font-bold text-12">
 								<a
 									href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
 									target="_blank"
@@ -115,19 +128,24 @@ const NavigationContent = ({
 							</li>
 						</ul>
 					</nav>
-					<div className="Navigation__Content--bottom">
+
+					{/* Bottom Section */}
+					<div className="flex flex-col justify-center border-t border-t-gray-300 gap-y-24 pt-24 mx-36 pb-80 sm:w-300">
+						{/* Social Media */}
 						<a
 							href="https://twitter.com/inialum"
 							target="_blank"
 							rel="noreferrer noopener"
-							className="Navigation__Item--XLink"
+							className="flex items-center w-fit"
 						>
 							<XLogo
 								aria-label="X公式アカウント"
-								className="Navigation__Item--XLogo"
+								className="h-24 fill-base-white"
 							/>
 						</a>
-						<div className="Navigation__Item--small">
+
+						{/* Links */}
+						<div className="flex items-center gap-x-20 text-gray-300 text-8">
 							<a
 								href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
 								target="_blank"
@@ -157,7 +175,9 @@ const NavigationContent = ({
 								GitHub
 							</a>
 						</div>
-						<div className="Navigation__Item--small">
+
+						{/* Copyright */}
+						<div className="text-8 text-gray-300">
 							&copy; {nowYear} INIALUM - INIAD Alumni Meetings.
 						</div>
 					</div>

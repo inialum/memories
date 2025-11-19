@@ -1,12 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { ButtonLink } from '@/components/ButtonLink'
+import { ButtonLink } from './ButtonLink'
 
 const meta = {
-	title: 'ButtonLink',
+	title: 'Components/ButtonLink',
 	component: ButtonLink,
+	parameters: {
+		layout: 'centered',
+	},
+	tags: ['autodocs'],
 } satisfies Meta<typeof ButtonLink>
-
 export default meta
 type Story = StoryObj<typeof meta>
 

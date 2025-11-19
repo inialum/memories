@@ -1,11 +1,10 @@
-import { fn } from '@storybook/test'
+import type { Meta, StoryObj } from '@storybook/react-vite'
+import { fn } from 'storybook/test'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
-import { Navigation } from '@/components/Navigation'
+import { Navigation } from './Navigation'
 
 const meta = {
-	title: 'Navigation',
+	title: 'Components/Navigation',
 	component: Navigation,
 	tags: ['!autodocs'],
 } satisfies Meta<typeof Navigation>
