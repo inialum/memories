@@ -22,7 +22,7 @@ export const Footer = ({ className, ...rest }: Props) => {
 						className="object-cover w-full h-full"
 					/>
 				</div>
-				<div className="font-bold text-8 md:text-13">
+				<div className="font-bold text-2xs md:text-sm">
 					さらなる連携を、ともに歩んだ仲間と
 				</div>
 			</div>
@@ -30,19 +30,19 @@ export const Footer = ({ className, ...rest }: Props) => {
 			{/* Navigation Section */}
 			<nav>
 				<ul className="flex flex-col items-center text-center gap-y-32 md:gap-y-48 pt-40 md:py-56 pb-28">
-					<li className="font-bold text-12 md:text-base">
+					<li className="font-bold text-xs md:text-base">
 						<a href="/">ホーム</a>
 					</li>
-					<li className="font-bold text-12 md:text-base">
+					<li className="font-bold text-xs md:text-base">
 						<a href="/vision">私たちの思い</a>
 					</li>
-					<li className="font-bold text-12 md:text-base">
+					<li className="font-bold text-xs md:text-base">
 						<a href="https://inialum.org/join">入会する</a>
 					</li>
-					<li className="font-bold text-12 md:text-base">
+					<li className="font-bold text-xs md:text-base">
 						<a href="/contact">お問い合わせ</a>
 					</li>
-					<li className="font-bold text-12 md:text-base">
+					<li className="font-bold text-xs md:text-base">
 						<a
 							href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
 							target="_blank"
@@ -71,7 +71,7 @@ export const Footer = ({ className, ...rest }: Props) => {
 				</div>
 
 				{/* Links */}
-				<div className="flex items-center justify-center text-gray-500 gap-x-20 md:gap-x-48 text-8 md:text-14">
+				<div className="flex items-center justify-center text-gray-500 gap-x-20 md:gap-x-48 text-2xs md:text-sm">
 					<a
 						href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
 						target="_blank"
@@ -103,7 +103,7 @@ export const Footer = ({ className, ...rest }: Props) => {
 				</div>
 
 				{/* Copyright */}
-				<div className="text-gray-500 text-8 md:text-14">
+				<div className="text-gray-500 text-2xs md:text-sm">
 					&copy; {nowYear} INIALUM - INIAD Alumni Meetings.
 				</div>
 			</div>

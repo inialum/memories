@@ -105,19 +105,19 @@ const NavigationContent = ({
 					{/* Navigation */}
 					<nav>
 						<ul className="flex flex-col justify-center gap-y-32 px-36 py-32 sm:mt-160">
-							<li className="font-bold text-12">
+							<li className="font-bold text-xs">
 								<a href="/">ホーム</a>
 							</li>
-							<li className="font-bold text-12">
+							<li className="font-bold text-xs">
 								<a href="/vision">私たちの思い</a>
 							</li>
-							<li className="font-bold text-12">
+							<li className="font-bold text-xs">
 								<a href="https://inialum.org/join">入会する</a>
 							</li>
-							<li className="font-bold text-12">
+							<li className="font-bold text-xs">
 								<a href="/contact">お問い合わせ</a>
 							</li>
-							<li className="font-bold text-12">
+							<li className="font-bold text-xs">
 								<a
 									href="https://inialum.notion.site/INIALUM-Q-A-0cfb2bd4cc814df6a29ca5aa7f9ad9b7"
 									target="_blank"
@@ -145,7 +145,7 @@ const NavigationContent = ({
 						</a>
 
 						{/* Links */}
-						<div className="flex items-center gap-x-20 text-gray-300 text-8">
+						<div className="flex items-center gap-x-20 text-gray-300 text-2xs">
 							<a
 								href="https://inialum.notion.site/4cbf67b190544bff8891deabc64e776c"
 								target="_blank"
@@ -177,7 +177,7 @@ const NavigationContent = ({
 						</div>
 
 						{/* Copyright */}
-						<div className="text-8 text-gray-300">
+						<div className="text-2xs text-gray-300">
 							&copy; {nowYear} INIALUM - INIAD Alumni Meetings.
 						</div>
 					</div>
