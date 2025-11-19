@@ -15,12 +15,6 @@ React component library for the Memories - INIALUM Design System.
 
 - [Storybook](https://memories-react.pages.dev)
 
-## Release (for maintainers)
-
-Run [Release workflow (GitHub Actions)](https://github.com/inialum/memories/actions/workflows/release.yml) to publish new version to npm.
-You can choose `major`, `minor`, `patch`, or `canary` as the release type.
-This workflow will automatically create a new release in GitHub and publish the package to npm.
-
 ## License
 
 Licensed under [Apache License 2.0](LICENSE). (except for images)  
