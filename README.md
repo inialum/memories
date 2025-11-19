@@ -8,8 +8,6 @@ This project is a monorepo that contains the following packages:
 [![npm version](https://img.shields.io/npm/v/%40inialum%2Fmemories-tailwind-theme?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600)](https://www.npmjs.com/package/@inialum/memories-tailwind-theme)  
 Tailwind CSS theme for the Memories - INIALUM Design System.
 
-- [Storybook](https://memories-css.pages.dev)
-
 ## [@inialum/memories-react](packages/react)
 
 [![npm version](https://img.shields.io/npm/v/%40inialum%2Fmemories-react?style=flat&label=npm%20version&color=36B011&cacheSeconds=3600)](https://www.npmjs.com/package/@inialum/memories-react)  
