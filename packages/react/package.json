@@ -58,7 +58,7 @@
 	},
 	"dependencies": {
 		"clsx": "^2.1.1",
-		"react-remove-scroll": "^2.7.1"
+		"react-remove-scroll": "^2.7.2"
 	},
 	"devDependencies": {
 		"@inialum/memories-tailwind-theme": "workspace:*",
