@@ -76,7 +76,7 @@
 		"react-dom": "^19.2.0",
 		"storybook": "^10.0.8",
 		"tailwindcss": "^4.1.17",
-		"vite": "^7.2.2",
+		"vite": "^7.2.6",
 		"vite-plugin-dts": "^4.5.4",
 		"vite-plugin-svgr": "^4.5.0"
 	},
