@@ -71,7 +71,7 @@
 		"@types/react": "^19.2.5",
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react-swc": "^4.2.2",
-		"globby": "^16.0.0",
+		"globby": "^16.1.0",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"storybook": "^10.0.8",
