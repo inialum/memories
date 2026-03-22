@@ -15,7 +15,6 @@
 		"version:ci": "changeset version && biome format --write",
 		"publish:ci": "pnpm publish -r && changeset tag",
 		"clean": "turbo clean",
-		"memories-css": "pnpm --filter \"./packages/css\"",
 		"memories-react": "pnpm --filter \"./packages/react\""
 	},
 	"devDependencies": {
@@ -26,5 +25,5 @@
 		"turbo": "^2.6.1",
 		"typescript": "^5.9.3"
 	},
-	"packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+	"packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
 }
