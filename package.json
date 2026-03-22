@@ -15,7 +15,6 @@
 		"version:ci": "changeset version && biome format --write",
 		"publish:ci": "pnpm publish -r && changeset tag",
 		"clean": "turbo clean",
-		"memories-css": "pnpm --filter \"./packages/css\"",
 		"memories-react": "pnpm --filter \"./packages/react\""
 	},
 	"devDependencies": {
