@@ -1,5 +1,11 @@
 # @inialum/memories-tailwind-theme
 
+## 1.0.1
+
+### Patch Changes
+
+- [#165](https://github.com/inialum/memories/pull/165) [`131a2c5`](https://github.com/inialum/memories/commit/131a2c5f1267731ee18e586b2d5a43a92a561cf9) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Update deps
+
 ## 1.0.0
 
 ### Major Changes
