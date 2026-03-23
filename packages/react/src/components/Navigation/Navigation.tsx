@@ -160,11 +160,7 @@ const NavigationContent = ({
 							>
 								役員一覧
 							</a>
-							<a
-								href="https://inialum.notion.site/d8a7e0dd14224c0dadfd630a6665cee0"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
+							<a href="https://inialum.org/privacy-policy">
 								プライバシーポリシー
 							</a>
 							<a
