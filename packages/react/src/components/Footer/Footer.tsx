@@ -86,11 +86,7 @@ export const Footer = ({ className, ...rest }: Props) => {
 					>
 						役員一覧
 					</a>
-					<a
-						href="https://inialum.org/privacy-policy"
-					>
-						プライバシーポリシー
-					</a>
+					<a href="https://inialum.org/privacy-policy">プライバシーポリシー</a>
 					<a
 						href="https://github.com/inialum"
 						target="_blank"

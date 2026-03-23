@@ -160,9 +160,7 @@ const NavigationContent = ({
 							>
 								役員一覧
 							</a>
-							<a
-								href="https://inialum.org/privacy-policy"
-							>
+							<a href="https://inialum.org/privacy-policy">
 								プライバシーポリシー
 							</a>
 							<a
