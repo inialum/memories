@@ -1,5 +1,13 @@
 # @inialum/memories-react
 
+## 1.0.2
+
+### Patch Changes
+
+- [#167](https://github.com/inialum/memories/pull/167) [`086b010`](https://github.com/inialum/memories/commit/086b010f78a2b41d4caa1052ec0cd6446826a552) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Update privacy policy links to the site page
+
+- [#169](https://github.com/inialum/memories/pull/169) [`4342e9b`](https://github.com/inialum/memories/commit/4342e9b7ca719aff355da1a4fd348159be155fe5) Thanks [@ryoheinan](https://github.com/ryoheinan)! - Fix privacy policy links to open in a new tab
+
 ## 1.0.1
 
 ### Patch Changes
