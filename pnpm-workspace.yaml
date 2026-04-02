@@ -8,4 +8,4 @@ allowBuilds:
 catalog:
   "@tailwindcss/vite": ^4.2.2
   tailwindcss: ^4.2.2
-  vite: ^8.0.1
+  vite: ^8.0.3
